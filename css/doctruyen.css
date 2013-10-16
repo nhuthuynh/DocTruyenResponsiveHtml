@@ -344,13 +344,14 @@ a.readmore {
 
     /* Truyen ngan & Truyen hay tong hop */
 
-    #main .manga-intro {
-    }
-
         #main .manga-intro .box {
             height: 260px;
             margin-bottom: 25px;
         }
+
+            #main .manga-intro .box:last-child {
+                
+            }
 
         #main .manga-intro img.manga-intro-img {
             float: left;
@@ -517,7 +518,12 @@ a.readmore {
 @media (max-width: 768px) {
 }
 /* Tablets (≥768px) .col-sm-*/
-@media (min-width: 768px) and (max-width: 990px) {
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        width: 768px;
+        max-width: 768px;
+    }
+    
     #nav .logo {
         left: 10px;
     }
@@ -535,27 +541,32 @@ a.readmore {
     }
     
     #main .box {
-        
+        margin: 0 25px 0 15px;
     }
+
+        #main .manga-intro .box:last-child {
+            margin-right: 25px;
+        }
     
     #main .box h4.box-title {
+        font-size: 1.1em;
         text-indent: 0;
     }
 
     #main .col-sm-4 {
-        width: 240px;
+        width: 220px;
     }
 
     #main .col-sm-8 {
-        width: 600px;
+        width: 520px;
     }
 
     #main div.most-read-box {
-        margin-left: 40px;
+        margin-left: 15px;
     }
 
     #main div.advert-box {
-        margin-left: 40px;
+        margin-left: 15px;
     }
 }
 
