@@ -54,9 +54,12 @@ a.readmore {
                 color: #fff;
                 font-size: 0.95em;
             }
+            
+            #nav nav ul.menu > li > a.sort-btn, #nav nav ul.menu > li > a.cate-btn, #nav nav ul.menu > li > a.post-btn {
+                margin-right: 30px;
+            }
 
-                #nav nav ul.menu > li > a.sort-btn {
-                    margin-right: 30px;
+                #nav nav ul.menu > li > a.sort-btn {    
                     padding: 0 20px 0 30px;
                 }
 
@@ -91,7 +94,6 @@ a.readmore {
                     }
 
                 #nav nav ul.menu > li > a.cate-btn {
-                    margin-right: 30px;
                     padding: 0 20px 0 35px;
                 }
 
@@ -110,8 +112,7 @@ a.readmore {
                     }
 
                 #nav nav ul.menu > li > a.post-btn {
-                    margin-right: 30px;
-                    padding: 0 20px 0 30px;
+                    padding: 0 5px 0 30px;
                 }
 
                     #nav nav ul.menu > li > a.post-btn:before {
@@ -349,10 +350,6 @@ a.readmore {
             margin-bottom: 25px;
         }
 
-            #main .manga-intro .box:last-child {
-                
-            }
-
         #main .manga-intro img.manga-intro-img {
             float: left;
             margin-right: 10px;
@@ -398,6 +395,10 @@ a.readmore {
     #main .advert-right {
         margin-bottom: 40px;
     }
+    
+    #main div.advert-box a:last-child {
+        display: none;
+    }
 
     #main .contact-to-advert {
         border: 1px solid #aa9aae;
@@ -433,8 +434,6 @@ a.readmore {
         #main .contact-col a.contact-email {
             color: #000;
             font-weight: bold;
-            display: block;
-            margin: 15px 5px 5px 10px;
             text-decoration: none;
         }
 
@@ -452,6 +451,7 @@ a.readmore {
             overflow: hidden;
             text-indent: 120%;
             width: 20px;
+            white-space: nowrap;
         }
 
             #main .contact-col .contact-links a.links.twitter {
@@ -532,8 +532,20 @@ a.readmore {
         margin-left: 110px;
     }
     
-    #nav nav ul.menu > li > a {
-        margin-right: 5px;
+    #nav nav ul.menu > li > a.sort-btn, #nav nav ul.menu > li > a.cate-btn, #nav nav ul.menu > li > a.post-btn {
+        margin-right: 10px;
+    }
+    
+    #nav nav ul.menu > li > input.search-field {
+        width: 125px;
+    }
+    
+    #nav nav ul.menu > li > input.submit-btn {
+        margin-right: 10px;
+    }
+    
+    #nav nav ul.menu > li > a.login-link {
+         margin-right: 5px;
     }
     
     #main {
@@ -548,6 +560,10 @@ a.readmore {
             margin-right: 25px;
         }
     
+    #main .manga-intro .box {
+        margin-bottom: 10px;    
+    }
+    
     #main .box h4.box-title {
         font-size: 1.1em;
         text-indent: 0;
@@ -561,12 +577,55 @@ a.readmore {
         width: 520px;
     }
 
-    #main div.most-read-box {
+    #main div.most-read-box, #main div.advert-box {
         margin-left: 15px;
     }
+    
+    #main .advert-right {
+        margin-bottom: 15px;
+    }
 
-    #main div.advert-box {
-        margin-left: 15px;
+    #main div.advert-box a:last-child {
+        display: block;
+    }
+    
+    #main .contact-col .box h4.box-title.borderRightNone {
+        width: 150px;
+    }
+    
+    #main .contact-col p.contact-links {
+        line-height: normal;
+    }
+    
+    #main .cate-col {
+        padding-bottom: 65px;
+        padding-top: 65px;
+    }
+    
+    #main .cate-col .cate-link {
+        padding-left: 10px;
+    }
+    
+    #main .cate-col .cate-link:before {
+        margin-right: 5px;
+    }
+    
+    #main .comment-col.box ul.list {
+        padding: 0;
+    }
+    
+    #main .comment-col.box ul.list li {
+        height: 50px;
+        padding-right: 20px;
+        overflow: hidden;
+    }
+    
+    #main .comment-col.box ul.list li:after {
+        right: 0;
+    }
+    
+    #main .box p.manga-newsComment {
+        line-height: 11px;
     }
 }
 
