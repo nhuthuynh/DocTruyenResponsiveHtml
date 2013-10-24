@@ -10,6 +10,7 @@ a.readmore {
     font: normal normal normal 1em/1em Arial, Helvetica, sans-serif;
     padding: 0;
     width: 1020px;
+    z-index: 1;
 }
 
 /* Navigation */
@@ -513,6 +514,51 @@ a.readmore {
                 margin-right: 15px;
                 width: 6px;
             }
+/* POPUP REGISTER */
+
+.overlay {
+    background-color: rgba(0,0,0,0.6);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 2;
+    
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay:target + .popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+}
+
+.popup_login {
+    margin: -25% 0 0 -25%;
+    visibility: hidden;
+}
+
+.popup_register {
+    margin: -25% 0 0 -25%;
+}
 
 /* Phones (<768px) .col-xs-*/
 @media (max-width: 768px) {

@@ -40,8 +40,8 @@
                         <input class="search-field" type="text" />
                         <input class="submit-btn" type="submit" value="" />
                     </li>
-                    <li><a class="login-link" href="#">Đăng nhập</a></li>
-                    <li><a class="register-link" href="#">Đăng ký</a></li>
+                    <li><a class="login-link" href="#login_form">Đăng nhập</a></li>
+                    <li><a class="register-link" href="#register_form">Đăng ký</a></li>
                 </ul>
             </nav>
         </header>
@@ -384,6 +384,106 @@
                 </div>
             </div>
         </div>
+    </div>
+    <a href="#x" class="overlay" id="register_form"></a>
+    <div class="popup popup_register">
+        <h3 class="title">
+            Đăng ký thành viên</h3>
+        <form>
+        <table class="register-table">
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Tên đăng nhập" id="username" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Email" id="email" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control" placeholder="Mật khẩu" id="pass" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" id="pass2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Họ và tên" id="name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Điện thoại" id="phone" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="code-confirm">
+                    </div>
+                    <input type="text" class="form-control" placeholder="Nhập mã xác nhận" id="code_confirm" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="agree_term" />
+                    <label for="agree_term">
+                        tôi đồng ý với các điều khoản tại
+                    </label>
+                    <a href="#">doctruyen.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="reset-btn">
+                        Nhập lại</button>
+                    <input class="register-btn" value="Đăng ký" type="submit" />
+                </td>
+            </tr>
+        </table>
+        </form>
+        <a class="close" href="#close"></a>
+    </div>
+    <a href="#x" class="overlay" id="login_form"></a>
+    <div class="popup popup_login">
+        <h3 class="title">
+        </h3>
+        <form>
+        <table class="login-table">
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Tên đăng nhập" id="login_username" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control" placeholder="Mật khẩu" id="login_pass" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="login_remember" /><label for="login_remember">Ghi nhớ đăng
+                        nhập</label><a href="#">Quên pass ?</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="login_register_btn">
+                        đăng ký</button><input type="submit" class="login_btn" value="Đăng nhập" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="login_by_face" href="#">đăng nhập bằng facebook</a>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <a class="close" href="#close"></a>
     </div>
     <script src="js/css3-mediaqueries.js"></script>
 </body>
