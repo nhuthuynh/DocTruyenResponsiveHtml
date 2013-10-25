@@ -537,6 +537,10 @@ a.readmore {
         visibility: visible;
         opacity: 1;
     }
+        .overlay:target ~ .popup {
+            opacity: 0;
+            visibility: hidden;
+        }
 
         .overlay:target + .popup {
             opacity: 1;
@@ -544,7 +548,7 @@ a.readmore {
         }
 
 .popup {
-    background-color: #EEE;
+    background-color: #fff;
     border-radius: 5px;
     left: 50%;
     position: absolute;
@@ -561,17 +565,21 @@ a.readmore {
         margin: 20px 0 10px 0;
         text-indent: 10px;
     }
+    
+    .popup .btn {
+        height: 30px;
+    }
 
     .popup table {
         font-size: 1em;
     }
 
-        .popup table.register-table {
+        .popup table {
             border-collapse: separate;
             margin: 10px 20px;
         }
 
-            .popup table.register-table td {
+            .popup table td {
                 padding: 5px;
             }
 
@@ -583,16 +591,66 @@ a.readmore {
         color: #000;
         text-decoration: none;
     }
+    
+    .popup a.close {
+        background: url(../img/icons.png) no-repeat -64px -72px;
+        height: 20px;
+        opacity: 0.8;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        width: 24px;
+    }
+
+    .popup a.close:hover {
+        opacity: 1;
+    }
 
 .popup_login {
-    margin: -232px 0 0 -184px;
+    height: 280px;
+    margin: -140px 0 0 -120px;
+    opacity: 0;
+    width: 240px;
     visibility: hidden;
 }
 
-.popup_register {
-    margin: -232px 0 0 -184px;
-    /* width: 368, height: 464*/
+.popup_login .login_by_face {
+    background: url(../img/icons.png) no-repeat 0 -183px;
+    height: 36px;
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    width: 190px;
+    white-space: nowrap;
 }
+
+.popup_login #login_remember + span, .popup_login #login_remember ~ a {
+    font-size: 0.8em;
+    line-height: 1.8em;
+}
+
+.popup_login #login_remember ~ a {
+    font-weight: bold;
+}
+
+.popup_login #login_remember {
+    margin-right: 5px;
+}
+
+.popup_register {
+    margin: -235px 0 0 -185px;
+    height: 470;
+    opacity: 0;
+    width: 370;
+    visibility: hidden;
+}
+
+.popup_register #code_confirm, .popup_register .code-confirm {
+    height: 34px;
+    width: 45%;
+}
+
+
 
 /* Phones (<768px) .col-xs-*/
 @media (max-width: 768px) {
