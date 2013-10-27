@@ -79,7 +79,8 @@ a.readmore {
                     }
 
                     #nav nav ul.menu > li > a.sort-btn:after,
-                    #nav nav ul.menu > li > a.cate-btn:after {
+                    #nav nav ul.menu > li > a.cate-btn:after,
+                    #nav nav ul.menu > li > a.personal-btn:after {
                         background: url(../img/icons.png) no-repeat 0 -32px;
                         content: " ";
                         position: absolute;
@@ -90,7 +91,8 @@ a.readmore {
                     }
 
                     #nav nav ul.menu > li > a.sort-btn:focus:after, #nav nav ul.menu > li > a.sort-btn:hover:after, #nav nav ul.menu > li > a.sort-btn.active:after,
-                    #nav nav ul.menu > li > a.cate-btn:focus:after, #nav nav ul.menu > li > a.cate-btn:hover:after, #nav nav ul.menu > li > a.cate-btn.active:after {
+                    #nav nav ul.menu > li > a.cate-btn:focus:after, #nav nav ul.menu > li > a.cate-btn:hover:after, #nav nav ul.menu > li > a.cate-btn.active:after,
+                    #nav nav ul.menu > li > a.personal-btn:focus:after, #nav nav ul.menu > li > a.personal-btn:hover:after, #nav nav ul.menu > li > a.personal-btn.active:after {
                         background-position: 0 -48px;
                     }
 
@@ -196,6 +198,30 @@ a.readmore {
                     white-space: nowrap;
                 }
 
+            #nav nav ul.menu > li > a.login-link, #nav nav ul.menu > li > a.register-link {
+                display:none;
+            }
+
+            #nav nav ul.menu > li > a.personal-btn {
+                margin-right: 30px;
+                padding: 0 20px 0 15px;
+            }
+
+            #nav nav ul.menu ul.personal-list {
+                left: -30%;
+                position: absolute;
+                top: 100%;
+                z-index: 10;
+            }
+
+            #nav nav ul.menu ul.personal-list li {
+                height: 20px;
+                line-height: 20px;
+            }
+
+            #nav nav ul.menu > li > a.logout-link {
+            
+            }
 /* Main */
 #main {
     padding: 0 20px 35px 20px;
