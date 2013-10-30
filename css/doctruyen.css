@@ -15,10 +15,7 @@ a.readmore {
 
 /* Navigation */
 #nav {
-    background: url(../img/nav_bg.png) no-repeat 0 -45px padding-box, url(../img/nav_bg.png) no-repeat 100% -45px padding-box, url(../img/nav_bg.png) repeat-x 0 0 content-box;
-    height: 45px;
     margin: 40px 0 25px 0;
-    padding: 0 1px;
     position: relative;
 }
 
@@ -29,7 +26,9 @@ a.readmore {
     }
 
     #nav nav {
-        margin-left: 150px;
+        background: url(../img/nav_bg.png) repeat-x 0 0;
+        height: 45px;
+        padding-left: 150px;
     }
 
         #nav nav ul {
@@ -46,7 +45,9 @@ a.readmore {
                     position: relative;
                 }
 
-            #nav nav ul a {
+            #nav nav ul.menu > li > a {
+                margin-right: 30px;
+                padding: 0 20px 0 30px;
                 position: relative;
                 text-decoration: none;
             }
@@ -55,14 +56,6 @@ a.readmore {
                 color: #fff;
                 font-size: 0.95em;
             }
-
-                #nav nav ul.menu > li > a.sort-btn, #nav nav ul.menu > li > a.cate-btn, #nav nav ul.menu > li > a.post-btn {
-                    margin-right: 30px;
-                }
-
-                #nav nav ul.menu > li > a.sort-btn {
-                    padding: 0 20px 0 30px;
-                }
 
                     #nav nav ul.menu > li > a.sort-btn:before {
                         background: url(../img/icons.png) no-repeat -42px -40px;
@@ -96,10 +89,6 @@ a.readmore {
                         background-position: 0 -48px;
                     }
 
-                #nav nav ul.menu > li > a.cate-btn {
-                    padding: 0 20px 0 35px;
-                }
-
                     #nav nav ul.menu > li > a.cate-btn:before {
                         background: url(../img/icons.png) no-repeat -16px -40px;
                         content: " ";
@@ -115,7 +104,7 @@ a.readmore {
                     }
 
                 #nav nav ul.menu > li > a.post-btn {
-                    padding: 0 5px 0 30px;
+                    padding-right: 5px;
                 }
 
                     #nav nav ul.menu > li > a.post-btn:before {
@@ -229,44 +218,10 @@ a.readmore {
                 display: block;
             }
 
-            #nav nav ul.menu ul.sub-list li {
-                background-color: #d9d9d8;
-                border-bottom: 1px solid #f0f0f0;
-                height: 20px;
-                line-height: 20px;
-            }
-
-                #nav nav ul.menu ul.sub-list li a {
-                    color: #000;
-                    font-size: 1em;
-                    padding: 0 25px;
-                    white-space: nowrap;
-                }
-
             #nav nav ul.menu > li > a.login-link, #nav nav ul.menu > li > a.register-link {
                 display:none;
             }
 
-            #nav nav ul.menu > li > a.personal-btn {
-                margin-right: 30px;
-                padding: 0 20px 0 15px;
-            }
-
-            #nav nav ul.menu ul.personal-list {
-                left: -30%;
-                position: absolute;
-                top: 100%;
-                z-index: 10;
-            }
-
-            #nav nav ul.menu ul.personal-list li {
-                height: 20px;
-                line-height: 20px;
-            }
-
-            #nav nav ul.menu > li > a.logout-link {
-            
-            }
 /* Main */
 #main {
     padding: 0 20px 35px 20px;
@@ -725,9 +680,36 @@ a.readmore {
 
 /* Mobiles */
 @media (max-width: 768px) {
+    .container {
+        width: 320px;
+    }
+    
     #main .box {
         margin-bottom: 5px;
         width: 280px;
+    }
+    
+    #main .manga-intro .box {
+        height: auto;
+    }
+    
+    #main .col-lg-8 .box h4.box-title {
+        width: 90%;
+    }
+    
+    #main .manga-intro h5.manga-intro-name {
+        padding-right: 15px;
+    }
+    
+    #main .manga-intro .manga-intro-name a.readmore {
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+    
+    #main .manga-intro img.manga-intro-img {
+        margin-right: 5px;
+        max-width: 40%;
     }
 
 }
@@ -743,9 +725,9 @@ a.readmore {
     }
 
     #nav nav {
-        margin-left: 110px;
+        padding-left: 110px;
     }
-    `
+
         #nav nav ul.menu > li > a.sort-btn {
             padding: 0 20px 0 25px;
         }
