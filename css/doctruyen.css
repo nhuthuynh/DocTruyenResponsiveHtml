@@ -2,8 +2,12 @@
     background-color: #f0f0f0;
 }
 
-a.readmore {
+a:hover, a:focus, a.active {
     text-decoration: none;
+}
+
+ul {
+    list-style:none;
 }
 
 .container {
@@ -261,7 +265,7 @@ a.readmore {
             width: 100%;
         }
 
-    #main .col-lg-8 .box h4.box-title {
+    #main .col-lg-8 .box h4.box-title , #main .list-content h4.box-title {
         width: 50%;
     }
 
@@ -676,7 +680,162 @@ a.readmore {
     width: 45%;
 }
 
+/* List page */
 
+#main .aside-right .voted-box {
+    margin: 0 0 40px 5px;
+    width: 290px;
+}
+
+#main .aside-right img.advert-right {
+    margin: 0 0 40px 15px;
+}
+
+#main .list-content ul.sub-nav {
+    margin-bottom: 10px;
+    padding: 0 0 0 20px;
+}
+
+#main .list-content ul.sub-nav li {
+    float: left;
+    margin: 0 0 0 5px;
+    white-space: nowrap;
+}
+
+#main .list-content ul.sub-nav li a {
+    color: #777;
+    font-size: 0.9em;
+    padding: 0 15px 0 0;
+    position: relative;
+}
+
+#main .list-content ul.sub-nav li a:after {
+    background: url(../img/icons.png) no-repeat 0 -62px;
+    content: "";
+    height: 6px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 5px;
+}
+
+#main .list-content ul.sub-nav li:last-child a:after {
+    background: none;
+}
+
+#main .list-content .intro p {
+    line-height: 1.2em;
+    padding: 0 0 5px 15px;
+}
+
+#main .list-content .list .row:nth-child(odd) {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+}
+
+#main .list-content .list .row:nth-child(even) {
+    padding: 6px 16px;
+}
+
+#main .list-content .list .row:last-child {
+    background: none;
+    border: none;
+    border-top: 1px solid #ddd;
+    padding: 5px 0 0 0;
+}
+
+#main .list-content .list img.thumbnail {
+    border-radius: 0;
+    -ms-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    border: 1px solid #989898;
+    float: left;
+    margin-right: 7px;
+}
+
+#main .list-content .list h6.title {
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+#main .list-content .list h6.title a {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#main .list-content .list h6.title a:hover, #main .list-content .list h6.title a:focus {
+    color: #1482d4;
+}
+
+#main .list-content .list p {
+    font-size: 0.75em;
+}
+
+#main .list-content .list .page-list ul {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+#main .list-content .list .page-list ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#main .list-content .list .page-list ul li a {
+    color: #000;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+#main .list-content .list .page-list ul li a:not(.last-page):not(.first-page) {
+    display: block;
+    height: 15px;
+    padding: 0 2px 2px 0;
+    text-align: center;
+    text-indent: 1px;
+    width: 15px;
+}
+
+#main .list-content .list .page-list ul li a.current-page:not(.last-page):not(.first-page),
+#main .list-content .list .page-list ul li a:hover:not(.last-page):not(.first-page),
+#main .list-content .list .page-list ul li a:focus:not(.last-page):not(.first-page) {
+    background: url(../img/icons.png) no-repeat 0 -68px;
+    color: #fff;
+}
+
+#main .list-content .list .page-list ul li a.first-page:after {
+    content: ">>";
+    padding: 0 5px;
+}
+
+#main .list-content .list .page-list ul li a.last-page:before {
+    content: "<<";
+    padding: 0 5px;
+}
+
+#main .list-content .list .page-list .page-num {
+    color: #999;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#main .list-content .list .page-list .page-num span{
+    background: url(../img/icons.png) no-repeat -100px 0;
+    color: #e4e4e4;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    width: 32px;
+}
 
 /* Mobiles */
 @media (max-width: 768px) {
