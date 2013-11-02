@@ -837,6 +837,44 @@ ul {
     width: 32px;
 }
 
+/* detail page */
+
+#main .fiction-content .fiction-intro img.fiction-img{
+    margin-right: 20px;
+}
+
+#main .fiction-content .fiction-intro h5.title {
+    color: #007ec8;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+#main .fiction-content .fiction-intro p {
+    font-size: 1em;
+}
+
+#main .fiction-content .fiction-intro span.highlight {
+    color: #2973c5;
+    font-weight: bold;
+}
+
+#main .fiction-content .fiction-intro ul.star-rate {
+}
+
+    #main .fiction-content .fiction-intro ul.star-rate li {
+        background: url(../img/icons.png) no-repeat -103px -40px;
+        display:inline-block;
+        height: 24px;
+        width: 24px;
+    }
+
+        #main .fiction-content .fiction-intro ul.star-rate li:hover,
+        #main .fiction-content .fiction-intro ul.star-rate li:hover ~ li {
+            background-position: -103px -16px
+        }
+
 /* Mobiles */
 @media (max-width: 768px) {
     .container {
