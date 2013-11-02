@@ -775,25 +775,25 @@ ul {
     font-size: 0.75em;
 }
 
-#main .list-content .list .page-list ul {
+#main .list-content .page-list ul {
     margin: 0 auto;
     padding: 0;
     text-align: center;
 }
 
-#main .list-content .list .page-list ul li {
+#main .list-content .page-list ul li {
     display: inline-block;
     margin: 0;
     padding: 0;
 }
 
-#main .list-content .list .page-list ul li a {
+#main .list-content .page-list ul li a {
     color: #000;
     font-size: 0.85em;
     font-weight: bold;
 }
 
-#main .list-content .list .page-list ul li a:not(.last-page):not(.first-page) {
+#main .list-content .page-list ul li a:not(.last-page):not(.first-page) {
     display: block;
     height: 15px;
     padding: 0 2px 2px 0;
@@ -802,30 +802,30 @@ ul {
     width: 15px;
 }
 
-#main .list-content .list .page-list ul li a.current-page:not(.last-page):not(.first-page),
-#main .list-content .list .page-list ul li a:hover:not(.last-page):not(.first-page),
-#main .list-content .list .page-list ul li a:focus:not(.last-page):not(.first-page) {
+#main .list-content .page-list ul li a.current-page:not(.last-page):not(.first-page),
+#main .list-content .page-list ul li a:hover:not(.last-page):not(.first-page),
+#main .list-content .page-list ul li a:focus:not(.last-page):not(.first-page) {
     background: url(../img/icons.png) no-repeat 0 -68px;
     color: #fff;
 }
 
-#main .list-content .list .page-list ul li a.first-page:after {
+#main .list-content .page-list ul li a.first-page:after {
     content: ">>";
     padding: 0 5px;
 }
 
-#main .list-content .list .page-list ul li a.last-page:before {
+#main .list-content .page-list ul li a.last-page:before {
     content: "<<";
     padding: 0 5px;
 }
 
-#main .list-content .list .page-list .page-num {
+#main .list-content .page-list .page-num {
     color: #999;
     margin-top: 5px;
     text-align: center;
 }
 
-#main .list-content .list .page-list .page-num span{
+#main .list-content .page-list .page-num span{
     background: url(../img/icons.png) no-repeat -100px 0;
     color: #e4e4e4;
     font-size: 1em;
