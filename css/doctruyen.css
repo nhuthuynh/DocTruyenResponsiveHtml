@@ -691,25 +691,29 @@ ul {
     margin: 0 0 40px 15px;
 }
 
-#main .list-content ul.sub-nav {
+#main ul.sub-nav {
     margin-bottom: 10px;
-    padding: 0 0 0 20px;
+    padding: 0;
 }
 
-#main .list-content ul.sub-nav li {
-    float: left;
+#main ul.sub-nav li {
+    display: inline-block;
     margin: 0 0 0 5px;
     white-space: nowrap;
 }
 
-#main .list-content ul.sub-nav li a {
+#main ul.sub-nav li:first-child {
+    margin: 0;
+}
+
+#main ul.sub-nav li a {
     color: #777;
     font-size: 0.9em;
     padding: 0 15px 0 0;
     position: relative;
 }
 
-#main .list-content ul.sub-nav li a:after {
+#main ul.sub-nav li a:after {
     background: url(../img/icons.png) no-repeat 0 -62px;
     content: "";
     height: 6px;
@@ -719,22 +723,23 @@ ul {
     width: 5px;
 }
 
-#main .list-content ul.sub-nav li:last-child a:after {
+#main ul.sub-nav li:last-child a:after {
     background: none;
 }
 
-#main .list-content .intro p {
+#main .list-content .list .intro p {
     line-height: 1.2em;
-    padding: 0 0 5px 15px;
+    font-size: 1.1em;
+    padding: 0 0 5px 0;
 }
 
-#main .list-content .list .row:nth-child(odd) {
+#main .list-content .list .row.background:nth-child(odd) {
     background-color: #f3f3f3;
     border: 1px solid #ddd;
     padding: 5px 15px;
 }
 
-#main .list-content .list .row:nth-child(even) {
+#main .list-content .list .row.background:nth-child(even) {
     padding: 6px 16px;
 }
 
@@ -843,16 +848,19 @@ ul {
     margin-right: 20px;
 }
 
-#main .fiction-content .fiction-intro h5.title {
+#main .fiction-content .fiction-intro h5.title, 
+#main .fiction-content .fiction-chapters-recent h5.title, 
+#main .fiction-content .fiction-chapter-list h5.title {
     color: #007ec8;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 10px 0;
     text-transform: uppercase;
 }
 
 #main .fiction-content .fiction-intro p {
     font-size: 1em;
+    margin-bottom: 5px;
 }
 
 #main .fiction-content .fiction-intro span.highlight {
@@ -861,19 +869,225 @@ ul {
 }
 
 #main .fiction-content .fiction-intro ul.star-rate {
+    direction: rtl;
+    padding-right: 155px;
 }
 
     #main .fiction-content .fiction-intro ul.star-rate li {
         background: url(../img/icons.png) no-repeat -103px -40px;
-        display:inline-block;
+        display: inline-block;
         height: 24px;
         width: 24px;
     }
 
         #main .fiction-content .fiction-intro ul.star-rate li:hover,
-        #main .fiction-content .fiction-intro ul.star-rate li:hover ~ li {
+        #main .fiction-content .fiction-intro ul.star-rate li:hover ~ li,
+        #main .fiction-content .fiction-intro ul.star-rate li.selected,
+        #main .fiction-content .fiction-intro ul.star-rate li.selected ~ li {
             background-position: -103px -16px
         }
+
+#main .fiction-content .fiction-brief h5.title {
+    background-color: #1d8ecb;
+    color: #fff;
+    font-size: 1.4em;
+    height: 32px;
+    line-height: 32px;
+    text-indent: 10px;
+}
+
+#main .fiction-content .fiction-brief p {
+    line-height: 1em;
+}
+
+#main .fiction-content .fiction-brief p.fiction-readmore {
+    text-align: center;
+}
+
+#main .fiction-content .fiction-brief a.fiction-readmore-button {
+    color: #2973c5;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-left: 15px;
+    position: relative;
+}
+
+#main .fiction-content .fiction-brief a.fiction-readmore-button:before {
+    background: url(../img/icons.png) no-repeat -162px 0;
+    content: "";
+    display: block;
+    height: 11px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 11px;
+}
+
+#main .fiction-content .fiction-social {
+    height: 38px;
+    line-height: 38px;
+    margin-top: 15px;
+}
+
+#main .fiction-content ul.fiction-social-buttons {
+    border: 1px solid #e3e3e3;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main .fiction-content .fiction-social-buttons li {
+    display: inline-block;
+}
+
+#main .fiction-content .fiction-chapters-recent h5.title {
+    color: #10a7e3;
+    padding-top: 2px;
+    position: relative;
+    text-indent: 35px;
+    text-transform: none;
+}
+
+#main .fiction-content .fiction-chapters-recent h5.title:before {
+    background: url(../img/icons.png) no-repeat -134px 0;
+    content: "";
+    height: 27px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 27px;
+}
+
+#main .fiction-content .fiction-chapters-recent-list {
+    padding: 0;
+}
+
+#main .fiction-content .fiction-chapters-recent li {
+    margin: 5px 0;
+    padding: 3px 0 0 30px;
+    position: relative;
+}
+
+#main .fiction-content .fiction-chapters-recent li:before {
+    background: url(../img/icons.png) no-repeat -100px -66px;
+    content: "";
+    height: 21px;
+    left: 3px;
+    position: absolute;
+    top: 0;
+    width: 21px;
+}
+
+#main .fiction-content .fiction-chapters-recent li a {
+    color: #000;
+}
+
+#main .fiction-content .fiction-chapters-recent li span.bold {
+    font-weight: bold;
+}
+
+#main .fiction-content .fiction-chapters-recent li span.bold:after {
+    content: ": ";
+}
+
+#main .fiction-content .fiction-chapters-recent li span.chapter-date-update {
+    color: #b4b6b7;
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+#main .fiction-content .fiction-chapter-list h5.title {
+    padding-left: 30px;
+    position: relative;
+    text-transform: none;
+}
+
+#main .fiction-content .fiction-chapter-list h5.title:before {
+    background: url(../img/icons.png) no-repeat right top;
+    content: "";
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+
+#main .fiction-chapter-list .table {
+    font-size: 0.85em;
+}
+
+#main .fiction-chapter-list .table td:first-child, #main .fiction-chapter-list .table th:first-child {
+    text-align: center;
+    width: 9%;
+}
+
+#main .fiction-chapter-list .table td:nth-child(2), #main .fiction-chapter-list .table th:nth-child(2) {
+    width: 21%;
+}
+
+#main .fiction-chapter-list .table td:nth-child(3), #main .fiction-chapter-list .table th:nth-child(3) {
+    width: 55%;
+}
+
+#main .fiction-chapter-list .table td:last-child, #main .fiction-chapter-list .table th:last-child {
+    text-align: center;
+    width: 15%;
+}
+
+.table thead > tr > th, .table tbody > tr > th, 
+.table tfoot > tr > th, .table thead > tr > td, 
+.table tbody > tr > td, .table tfoot > tr > td {
+    border-top: 2px solid #dffaff;
+}
+
+#main .fiction-chapter-list .table thead > tr:first-child {
+    background-color: #0082c8;
+}
+
+#main .fiction-chapter-list .table thead > tr > th {
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#main .fiction-chapter-list .table tbody > tr > td {
+    color: #686b56;
+    font-weight: bold;
+    padding: 4px;
+}
+
+#main .fiction-chapter-list .table tbody > tr > td a {
+    color: #224560;
+}
+
+#main .fiction-chapter-list .table tbody > tr:nth-child(even) {
+    background-color: #cbf0ff;
+}
+
+#main .fiction-chapter-list .table tbody > tr:nth-child(odd) {
+    background-color: #7dd7fc;
+}
+
+#main .fiction-content .border-dotted-bottom {
+    border-bottom: 2px dotted #90d5f2;
+    padding-bottom: 10px;
+}
+
+/* Fiction Content */
+#main .fiction-content.box {
+    margin: 0;
+}
+
+#main .fiction-content.box h4.box-title {
+    width: 50%;
+}
+
+#main .fiction-content ul.sub-nav {
+    border-bottom: 1px solid #979797;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
 
 /* Mobiles */
 @media (max-width: 768px) {
