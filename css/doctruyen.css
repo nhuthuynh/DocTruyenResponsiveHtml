@@ -1090,6 +1090,7 @@ ul {
     border-bottom: 1px solid #979797;
     padding-bottom: 10px;
     margin-bottom: 15px;
+    text-align: left;
 }
 
 #main .fiction-content h2.fiction-title, #main .fiction-content h5.fiction-author, #main .fiction-content h3.fiction-chapter {
@@ -1170,6 +1171,7 @@ ul {
 
 #main h4.fiction-content-endline {
     color: #008acf;
+    font-weight: bold;
     text-align: center;
     position: relative;
     text-transform: uppercase;
@@ -1223,6 +1225,177 @@ ul {
 #main .about-poster.box h4.box-title {
     width: 30%;
 }
+
+#main .about-poster img.thumbnail {
+    margin: 0 5px 15px 0;
+}
+
+#main .about-poster h5.poster-name {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 5px 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#main .about-poster p {
+    margin-bottom: 5px;
+}
+
+#main .about-poster span.like, #main .about-poster span.follow {
+    color: #727272;
+    font-size: 0.75em;
+}
+
+#main .about-poster span.follow:after {
+    content: " follow";
+}
+
+#main .about-poster span.like:after {
+    content: " like - "
+}
+
+#main .about-poster a.read-all-post {
+    color: #000;
+}
+
+#main .about-poster a.read-all-post:after {
+    content: " »";
+}
+
+#main .about-poster-buttons a {
+    background: url(../img/icons.png) no-repeat -125px -66px;
+    color: #fff;
+    height: 21px;
+    display: inline-block;
+    line-height: 18px;
+    text-align: center;
+    width: 50px;
+}
+
+/* comment box */
+
+#main div.comment-face div.box, #main div.comment-webtruyen div.box {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    margin: 0;
+}
+
+#main div.comment-face div.box {
+    height: 100%;
+}
+
+#main .comment-webtruyen .row {
+    border-bottom: 1px solid #bfbfbf;
+    margin: 0 0 10px 0;
+}
+
+#main .comment-webtruyen .row:last-child {
+    border: none;
+    text-align: center;
+}
+
+#main .comment-webtruyen a.show-more-comment {
+    background: url(../img/icons.png) no-repeat -162px -240px;
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+}
+
+#main .comment-webtruyen .col-lg-4,
+#main .comment-webtruyen .col-md-4, 
+#main .comment-webtruyen .col-sm-4 {
+    width: 33.33333333%;
+}
+
+#main .comment-webtruyen .col-lg-8,
+#main .comment-webtruyen .col-md-8, 
+#main .comment-webtruyen .col-sm-8 {
+    width: 66.66666666%;
+}
+
+#main div.comment-face div.box h4.box-title, #main div.comment-webtruyen div.box h4.box-title {
+    width: 50%;
+}
+
+#main .comment-webtruyen img.img-responsive {
+    border: none;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    max-width: 65px;
+    padding: 0;
+}
+
+#main .comment-webtruyen textarea.comment-box {
+    color: #000;
+    height: 65px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#main .comment-webtruyen textarea.comment-box + p {
+    padding-right: 15px;
+    text-align: right;
+}
+
+#main .comment-webtruyen button {
+    background: url(../img/icons.png) no-repeat 0 -244px;
+    font-size: 0.85em;
+    border: none;
+    display: inline-block;
+    padding: 0;
+}
+
+#main .comment-webtruyen button.btn-post {
+    background-position: -1px -242px;
+    color: #276a85;
+    height: 28px;
+    line-height: 20px;
+    width: 74px
+}
+
+#main .comment-webtruyen button.btn-del {
+    background-position: -75px -244px;
+    color: #fff;
+    height: 24px;
+    line-height: 20px;
+    width: 72px
+}
+
+#main .comment-webtruyen .comments-content, #main .comment-webtruyen p {
+    font-size: 0.9em;
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+#main .comment-webtruyen .textLightBlue {
+    color: #0085ca;
+    font-weight: bold;
+}
+
+#main .comment-webtruyen span.name {
+
+}
+
+#main .comment-webtruyen span.date-time {
+    font-size: 0.8em;
+}
+
+#main .comment-webtruyen .comments-content + p {
+    text-align: right;
+}
+
+#main .comment-webtruyen a.like-comment, #main .comment-webtruyen a.reply-comment {
+    display: inline-block;
+    margin: 0 15px;
+}
+
 /* Mobiles */
 @media (max-width: 768px) {
     .container {
