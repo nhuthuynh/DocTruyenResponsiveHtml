@@ -1424,7 +1424,7 @@ ul {
 }
 
 /* Mobiles */
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 765px) {
     .container {
         width: 320px;
     }
