@@ -1080,11 +1080,37 @@ ul {
 /* Fiction Content */
 #main .fiction-content.box, #main .about-poster.box {
     margin: 0;
+    position: relative;
 }
 
     #main .fiction-content.box h4.box-title, #main .about-poster.box h4.box-title {
         width: 50%;
     }
+
+#main .fiction-content.box ul.zoom-nav {
+    position: absolute;
+    right: 35px;
+    top: 160px;
+}
+
+#main .fiction-content.box ul.zoom-nav li {
+    display: inline-block;
+}
+
+#main .fiction-content.box ul.zoom-nav li a {
+    background: url(../img/icons.png) no-repeat;
+    height: 24px;
+    display: block;
+    width: 24px;
+}
+
+#main .fiction-content.box ul.zoom-nav li a.zoom-in {
+    background-position: -166px -17px;
+}
+
+#main .fiction-content.box ul.zoom-nav li a.zoom-out {
+    background-position: -166px -41px;
+}
 
 #main .fiction-content ul.sub-nav {
     border-bottom: 1px solid #979797;
@@ -1126,7 +1152,7 @@ ul {
 }
 
 #main .fiction-content ul {
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -1369,6 +1395,7 @@ ul {
 
 #main .comment-webtruyen .comments-content, #main .comment-webtruyen p {
     font-size: 0.9em;
+    line-height: 1em;
     overflow: hidden;
     margin-bottom: 5px;
     padding-left: 10px;
