@@ -9,9 +9,16 @@
 <body>
     <div class="container">
         <header id="nav">
-            <img class="logo img-responsive" alt="webtruyen logo" src="img/logo.png" />
-            <nav>
-                <ul class="menu">
+            <img class="logo pull-left img-responsive" alt="webtruyen logo" src="img/logo.png" />
+            <div class="container">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <nav class="navbar-collapse">
+                <ul class="menu nav navbar-nav">
                     <li>
                         <a class="sort-btn">Sắp xếp</a>
                         <ul class="dropdown-menu">
@@ -39,14 +46,14 @@
                     <li><a class="post-btn">Đăng truyện</a></li>
                     <li class="search">
                         <button class="btn btn-default dropdown-toggle pull-left search-by" data-toggle="dropdown" type="button">
-                                    Tìm truyện
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu search-by-list">
-                                    <li><a href="#">Tìm truyện</a></li>
-                                    <li><a href="#">Tên tác giả</a></li>
-                                    <li><a href="#">Tên truyện</a></li>
-                                </ul>
+                            Tìm truyện
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu search-by-list">
+                            <li><a href="#">Tìm truyện</a></li>
+                            <li><a href="#">Tên tác giả</a></li>
+                            <li><a href="#">Tên truyện</a></li>
+                        </ul>
                         <input class="search-field form-control pull-left" type="text" />
                         <input class="submit-btn pull-right" type="submit" value="" />
                     </li>
@@ -63,7 +70,8 @@
                         </ul>
                     </li>
                 </ul>
-            </nav>
+                </nav>
+            </div>
         </header>
         <div id="main">
             <div class="row content">
