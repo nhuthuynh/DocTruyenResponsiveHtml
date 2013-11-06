@@ -131,7 +131,15 @@ ul {
                             #nav nav ul.menu > li > a.post-btn:focus:before, #nav nav ul.menu > li > a.post-btn:hover:before, #nav nav ul.menu > li > a.post-btn.active:before {
                                 background-position: -76px -24px;
                             }
-
+                    #nav nav ul.menu > li > a.personal-btn {
+                        margin: 0;
+                        padding-left: 20px;
+                    }
+                    
+                    #nav nav ul.menu > li > a.logout-link {
+                        margin: 0;
+                        padding-right: 0;
+                    }
                     #nav nav ul.menu > li.search .btn {
                         border: none;
                         height: 20px;
@@ -211,7 +219,7 @@ ul {
                         -o-border-radius: 7px;
                         -moz-border-radius: 7px;
                         float: left;
-                        margin: 10px 20px 0 -11px;
+                        margin: 10px 0 0 -11px;
                         height: 20px;
                         position: relative;
                         width: 29px;
@@ -227,9 +235,9 @@ ul {
                     top: 35px;
                 }
 
-                #nav nav ul.menu li:hover > ul.dropdown-menu, 
-                #nav nav ul.menu li:focus > ul.dropdown-menu, 
-                #nav nav ul.menu li.active > ul.dropdown-menu,
+                #nav nav ul.menu li:hover > ul.dropdown-menu:not(.search-by-list), 
+                #nav nav ul.menu li:focus > ul.dropdown-menu:not(.search-by-list), 
+                #nav nav ul.menu li.active > ul.dropdown-menu:not(.search-by-list),
                 #nav nav ul.menu li.search .btn:hover + ul.dropdown-menu,
                 #nav nav ul.menu li.search .btn:hover + ul.dropdown-menu, 
                 #nav nav ul.menu li.search .btn:hover + ul.dropdown-menu {
@@ -251,30 +259,36 @@ ul {
         margin: 15px 0 0 0;
     }
 
-    #main .box {
+    .container .box {
         background-color: #fff;
         border: 1px solid #aeaeae;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        -moz-border-radius: 10px;
-        padding: 50px 15px 15px 15px;
+        padding: 10px;
         position: relative;
     }
-
-        #main .box:last-child {
-            margin-right: 0;
+    
+    #main .col-md-4.col-lg-4.col-sm-4.box {
+        width: 280px;
+    }
+    
+    .container .box.title {
+        padding-top: 50px;
+    }
+        
+        .container .box.borderRounded {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            -moz-border-radius: 10px;
         }
 
-
         /* white box, round border, title */
-        #main .box h4.box-title {
+        .container .box h4.box-title {
             background: url(../img/bg_title_box.png) repeat-x 0 0;
             color: #fff;
             left: 0;
-            height: 40px;
-            font: normal normal normal 1.25em/38px Arial, Helvetica, sans-serif;
+            height: 35px;
+            font: normal normal normal 1.25em/35px Arial, Helvetica, sans-serif;
             position: absolute;
             text-indent: 5px;
             top: 0;
@@ -288,30 +302,26 @@ ul {
     #main .box h4.box-title:before, #main .box h4.box-title:after {
         background: url(../img/bg_title_box_leftright.png) no-repeat 0 0;
         content: "";
-        height: 40px;
+        height: 35px;
         position: absolute;
         top: 0;
-        width: 16px;
+        width: 8px;
     }
 
     #main .box h4.box-title:before {
-        background-position: 0 -80px;
-        left: -13px;
+        background-position: 0 -35px;
+        left: -7px;
     }
 
     #main .box h4.box-title:after {
-        background-position: 100% 0;
-        right: -16px;
+        right: -8px;
     }
 
     #main .box h4.box-title a.readmore {
         float: right;
         color: #fff;
+        margin-right: 5px;
         font-size: 0.7em;
-    }
-
-    #main .box h4.box-title.borderRightNone:after {
-        background-position: 100% -40px;
     }
 
     #main .box ul.list {
@@ -390,13 +400,19 @@ ul {
                     padding: 0;
                 }
 
-    /* Truyen ngan & Truyen hay tong hop */
+    /* Truyen ngan */
 
-    #main .manga-intro .box {
-        height: 260px;
-        margin-bottom: 25px;
+    #main .manga-intro {
+        overflow: hidden;
+        padding-right: 30px;
     }
-
+    
+    #main .manga-intro h4.title {
+        color: #008bcf;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    
     #main .manga-intro img.manga-intro-img {
         float: left;
         margin-right: 10px;
@@ -435,131 +451,100 @@ ul {
         }
 
     #main .manga-intro p.manga-intro-brief {
-        font-size: 0.9em;
+        font-size: 1em;
+        line-height: 1.25em;
         text-align: justify;
+    }
+    
+    #main .manga-intro > div:nth-child(2) {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+    }
+    
+    #main .manga-intro > div:before, #main .manga-intro > div:after {
+        content: "";
+        display: table;
+    }
+    
+    #main .manga-intro > div:after {
+        clear: both;
     }
 
     #main .advert-right {
-        margin-bottom: 40px;
+        height: 250px;
+        margin-bottom: 10px;
+        width: 300px;
     }
 
-    #main div.advert-box a:last-child {
-        display: none;
-    }
-
-    #main .contact-to-advert {
-        border: 1px solid #aa9aae;
-        border-bottom: none;
-        height: 74px;
-        margin-bottom: 40px;
-        width: 610px;
-    }
-
-    /* lien he dat quang cao, ve chung toi, the loai, nhan xet moi */
-
-    #main .contact-col {
-        margin-right: 35px;
-    }
-
-        #main .contact-col .box {
-            padding-bottom: 0;
+    /* footer */
+        #main .footer .box {
+            padding: 20px 15px;
         }
-
-            #main .contact-col .box:first-child {
-                margin-bottom: 10px;
-            }
-
-            #main .contact-col .box h4.box-title.borderRightNone {
-                width: 230px;
-            }
-
-            #main .contact-col .box p.about-us {
-                font-size: 0.75em;
-                text-align: justify;
-            }
-
+        
+        #main .tags p {
+            font-size: 1.2em;
+            line-height: 1.2em;
+        }
+        
+        #main .contact-col {
+            border-right: 1px solid #a2a2a2;
+        }
+        
         #main .contact-col a.contact-email {
             color: #000;
             font-weight: bold;
             text-decoration: none;
         }
-
-        #main .contact-col p.contact-links {
-            background: url(../img/icons.png) no-repeat 0 -92px;
-            height: 90px;
-            line-height: 110px;
-            padding-left: 95px;
+        
+        #main .contact-col a.contact-email:before {
+            content: "Email: "; 
         }
 
-        #main .contact-col .contact-links a.links {
-            background: url(../img/icons.png) no-repeat -16px 0;
+        #main a.links {
+            background: url(../img/icons.png) no-repeat;
             display: inline-block;
             height: 20px;
+            margin-right: 5px;
             overflow: hidden;
             text-indent: 120%;
             width: 20px;
             white-space: nowrap;
         }
+            #main a.links.face {
+                background-position: -16px 0;
+            }
 
-            #main .contact-col .contact-links a.links.twitter {
+            #main a.links.twitter {
                 background-position: -36px 0;
             }
 
-            #main .contact-col .contact-links a.links.google {
+            #main a.links.google {
                 background-position: -56px 0;
             }
 
-            #main .contact-col .contact-links a.links.linkedIn {
+            #main a.links.linkedIn {
                 background-position: -56px -20px;
             }
 
-            #main .contact-col .contact-links a.links.other1 {
+            #main a.links.other1 {
                 background-position: -36px -20px;
             }
 
-            #main .contact-col .contact-links a.links.other2 {
+            #main a.links.other2 {
                 background-position: -16px -20px;
             }
-
-    #main .box p.manga-newsComment {
-        font-size: 0.75em;
-        line-height: 10px;
-        text-align: justify;
+    #main .footer .message h3 {
+        color: #069bdf;
+        font-weight: bold;
+        margin: 10px 0 5px 0;
     }
-
-    #main .comment-col ul.list li::after {
-        top: 5%;
+    
+    #main .footer .message p {
+        font-size: 1.1em;
+        line-height: 1.1em;
     }
-
-    #main .cate-col {
-        background-color: #f9f9f9;
-        padding-bottom: 50px;
-    }
-
-        #main .cate-col .row {
-            height: 40px;
-            line-height: 40px;
-        }
-
-            #main .cate-col .row:nth-child(odd) {
-                background-color: #fdfdfd;
-            }
-
-        #main .cate-col .cate-link {
-            color: #898989;
-            text-decoration: none;
-            text-transform: capitalize;
-            white-space: nowrap;
-        }
-
-            #main .cate-col .cate-link:before {
-                background: url(../img/icons.png) no-repeat -10px 0;
-                content: " ";
-                display: inline-block;
-                height: 9px;
-                margin-right: 15px;
-                width: 6px;
-            }
+    
 /* POPUP REGISTER */
 
 .overlay {
@@ -1621,10 +1606,6 @@ ul {
             display: block;
         }
 
-        #main .contact-col .box h4.box-title.borderRightNone {
-            width: 150px;
-        }
-
         #main .contact-col p.contact-links {
             line-height: normal;
         }
@@ -1694,28 +1675,5 @@ ul {
 
     #main div.advert-box {
         margin-left: 10px;
-    }
-}
-
-/* Desktops (≥1200px) .col-lg-*/
-@media screen and (min-width: 1200px) {
-    #main .box {
-        margin: 0 25px 0 15px;
-    }
-
-    #main .col-lg-4 {
-        width: 290px;
-    }
-
-    #main .col-lg-8 {
-        width: 625px;
-    }
-
-    #main div.most-read-box {
-        margin-left: 40px;
-    }
-
-    #main div.advert-box {
-        margin-left: 40px;
     }
 }
