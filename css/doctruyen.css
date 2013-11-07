@@ -874,16 +874,24 @@ ul {
 
 /* detail page */
 
+#main .box.fiction-content {
+    padding: 15px;
+}
+
+#main .list-content .fiction-content h4.title,
+#main .list-content .fiction-content ul.sub-nav {
+    margin-left: 0;
+}
+
 #main .fiction-content .fiction-intro img.fiction-img {
-    margin-right: 20px;
+    margin: 0 20px 10px 0;
 }
 
 #main .fiction-content .fiction-intro h5.title,
 #main .fiction-content .fiction-chapters-recent h5.title,
-#main .fiction-content .fiction-chapter-list h5.title {
+#main .fiction-content h5.fiction-chapter-list-title {
     color: #007ec8;
     font-size: 1.3em;
-    font-weight: bold;
     margin: 10px 0;
     text-transform: uppercase;
 }
@@ -920,14 +928,15 @@ ul {
 #main .fiction-content .fiction-brief h5.title {
     background-color: #1d8ecb;
     color: #fff;
-    font-size: 1.4em;
+    font-size: 1.3em;
     height: 32px;
     line-height: 32px;
     text-indent: 10px;
+    text-transform: none;
 }
 
 #main .fiction-content .fiction-brief p {
-    line-height: 1em;
+    line-height: 1.2em;
 }
 
     #main .fiction-content .fiction-brief p.fiction-readmore {
@@ -935,7 +944,7 @@ ul {
     }
 
 #main .fiction-content .fiction-brief a.fiction-readmore-button {
-    color: #2973c5;
+    color: #0062b4;
     font-size: 0.9em;
     font-weight: bold;
     padding-left: 15px;
@@ -953,18 +962,16 @@ ul {
         width: 11px;
     }
 
-#main .fiction-content .fiction-social {
-    height: 38px;
-    line-height: 38px;
-    margin-top: 15px;
-}
-
 #main .fiction-content ul.fiction-social-buttons {
     border: 1px solid #e3e3e3;
     border-left: none;
     border-right: none;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 15px;
     margin: 0;
     padding: 0;
+    text-align: left;
 }
 
 #main .fiction-content .fiction-social-buttons li {
@@ -990,6 +997,7 @@ ul {
     }
 
 #main .fiction-content .fiction-chapters-recent-list {
+    text-align: left;
     padding: 0;
 }
 
@@ -1027,13 +1035,13 @@ ul {
         font-style: italic;
     }
 
-#main .fiction-content .fiction-chapter-list h5.title {
+#main .fiction-content h5.fiction-chapter-list-title {
     padding-left: 30px;
     position: relative;
     text-transform: none;
 }
 
-    #main .fiction-content .fiction-chapter-list h5.title:before {
+    #main .fiction-content h5.fiction-chapter-list-title:before {
         background: url(../img/icons.png) no-repeat right top;
         content: "";
         height: 16px;
@@ -1117,7 +1125,7 @@ ul {
     #main .fiction-content.box ul.zoom-nav {
         position: absolute;
         right: 35px;
-        top: 160px;
+        top: 130px;
     }
 
         #main .fiction-content.box ul.zoom-nav li {
@@ -1327,7 +1335,9 @@ ul {
 }
 
 /* comment box */
-
+#main div.comment-face div.box h4.title, #main div.comment-webtruyen div.box h4.title {
+    font-size: 1.2em;
+}
 #main div.comment-face div.box, #main div.comment-webtruyen div.box {
     border-radius: 0;
     -moz-border-radius: 0;
