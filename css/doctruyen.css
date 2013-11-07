@@ -690,10 +690,6 @@ ul {
     width: 290px;
 }
 
-#main .aside-right img.advert-right {
-    margin: 0 0 40px 15px;
-}
-
 #main ul.sub-nav {
     margin-bottom: 10px;
     padding: 0;
@@ -730,26 +726,47 @@ ul {
             background: none;
         }
 
+#main .list-content .box {
+    padding: 10px 0;
+}
+
+#main .list-content ul.sub-nav, #main .list-content p.intro {
+    margin: 0 10px;
+}
+
+#main .list-content h4.title {
+    margin: 10px;
+}
+
 #main .list-content p.intro {
     line-height: 1.2em;
     font-size: 1.1em;
     padding: 0 0 5px 0;
 }
 
-#main .list-content .row.background:nth-child(odd) {
+#main .list-content .list-fiction .table {
+    margin: 0;
+}
+
+#main .list-content .list-fiction .table tbody > tr > td {
+    border-top: none;
+}
+
+#main .list-content .list-fiction .background:nth-child(odd) {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
     padding: 5px 15px;
 }
 
-#main .list-content .row.background:nth-child(even) {
-    background-color: #f3f3f3;
-    border: 1px solid #ddd;
+#main .list-content .list-fiction .background:nth-child(even) {
     padding: 6px 16px;
 }
 
-#main .list-content .row:last-child {
+#main .list-content .row.page-list {
     background: none;
     border: none;
     border-top: 1px solid #ddd;
+    margin: 0;
     padding: 5px 0 0 0;
 }
 
@@ -833,16 +850,26 @@ ul {
     text-align: center;
 }
 
-    #main .list-content .page-list .page-num span {
-        background: url(../img/icons.png) no-repeat -100px 0;
-        color: #e4e4e4;
+    #main .list-content .page-list .page-num a.num {
+        background: #28a0df;
+        color: #fff;
         font-size: 1em;
         font-weight: bold;
         display: inline-block;
-        height: 15px;
-        line-height: 15px;
-        text-align: center;
-        width: 32px;
+        padding: 4px 10px;
+    }
+
+    #main .list-content .page-list .page-num a.btn-page {
+        transform: rotate(-85deg);
+        -o-transform: rotate(-85deg);
+        -ms-transform: rotate(-85deg);
+        -moz-transform: rotate(-85deg);
+        -webkit-transform: rotate(-85deg);
+        background: url(../img/icons.png) no-repeat -162px -243px;
+        display: inline-block;
+        height: 28px;
+        vertical-align: middle;
+        width: 28px;
     }
 
 /* detail page */
