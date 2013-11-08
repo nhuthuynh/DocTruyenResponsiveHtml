@@ -57,7 +57,7 @@ ul {
         #nav nav ul.menu > li > a.sort-btn:before, #nav nav ul.menu > li > a.sort-btn:after,
         #nav nav ul.menu > li > a.cate-btn:before, #nav nav ul.menu > li > a.cate-btn:after,
         #nav nav ul.menu > li > a.post-btn:before, #nav nav ul.menu > li > a.post-btn:after,
-        #nav nav ul.menu > li > a.personal-btn:before, #nav nav ul.menu > li > a.personal-btn:after {
+        #nav nav ul.menu > li > a.personal-btn:after {
             background: url(../img/icons.png) no-repeat;
             content: " ";
             position: absolute;
@@ -65,8 +65,7 @@ ul {
 
         #nav nav ul.menu > li > a.sort-btn:before,
         #nav nav ul.menu > li > a.cate-btn:before,
-        #nav nav ul.menu > li > a.post-btn:before,
-        #nav nav ul.menu > li > a.personal-btn:before {
+        #nav nav ul.menu > li > a.post-btn:before {
             left: 0;
             top: 7px;
         }
@@ -133,12 +132,12 @@ ul {
             margin: 0;
             padding-left: 20px;
         }
-
+                
         #nav nav ul.menu > li > a.logout-link {
             margin: 0;
             padding-right: 0;
         }
-
+        
     #nav nav ul.menu > li.search .btn {
         border: none;
         height: 20px;
@@ -234,6 +233,26 @@ ul {
     top: 35px;
 }
 
+#nav nav ul.menu a.cate-btn + ul.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    width: 362px;
+}
+
+#nav nav ul.menu a.cate-btn + ul.dropdown-menu li {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 120px;
+}
+
+#nav nav ul.menu a.cate-btn + ul.dropdown-menu > li > a {
+    padding: 5px;
+    text-indent: 5px;
+}
+
 #nav nav ul.menu li:hover > ul.dropdown-menu:not(.search-by-list),
 #nav nav ul.menu li:focus > ul.dropdown-menu:not(.search-by-list),
 #nav nav ul.menu li.active > ul.dropdown-menu:not(.search-by-list),
@@ -243,10 +262,8 @@ ul {
     display: block;
 }
 
-
-
 #nav nav ul.menu > li > a.login-link, #nav nav ul.menu > li > a.register-link {
-    display: none;
+        display: none;
 }
 
 /* Main */
@@ -265,10 +282,6 @@ ul {
     position: relative;
 }
 
-#main .col-md-4.col-lg-4.col-sm-4.box {
-    width: 280px;
-}
-
 .container .box.title-bg {
     padding-top: 50px;
 }
@@ -282,23 +295,25 @@ ul {
 }
 
 /* white box, round border, title */
-.container .box h4.box-title {
+.container .box h2.box-title, .container .about-poster h4.box-title {
     background: url(../img/bg_title_box.png) repeat-x 0 0;
     color: #fff;
     left: 0;
     height: 35px;
     font: normal normal normal 1.25em/35px Arial, Helvetica, sans-serif;
+    margin-top: 10px;
     position: absolute;
     text-indent: 5px;
     top: 0;
     width: 100%;
 }
 
-#main .col-lg-8 .box h4.box-title, #main .list-content h4.box-title {
+#main .col-lg-8 .box h2.box-title, #main .list-content h2.box-title, .container .about-poster h4.box-title {
     width: 50%;
 }
 
-#main .box h4.box-title:before, #main .box h4.box-title:not(.borderRightNone):after {
+#main .box h2.box-title:before, #main .box h2.box-title:not(.borderRightNone):after, 
+#main .about-poster h4.box-title:before {
     background: url(../img/bg_title_box_leftright.png) no-repeat 0 0;
     content: "";
     height: 35px;
@@ -307,16 +322,17 @@ ul {
     width: 8px;
 }
 
-#main .box h4.box-title:before {
+#main .box h2.box-title:before,
+#main .about-poster h4.box-title:before {
     background-position: 0 -35px;
     left: -7px;
 }
 
-#main .box h4.box-title:after {
+#main .box h2.box-title:after {
     right: -8px;
 }
 
-#main .box h4.box-title a.readmore {
+#main .box h2.box-title a.readmore {
     float: right;
     color: #fff;
     margin-right: 5px;
@@ -372,14 +388,14 @@ ul {
             width: 40px;
         }
 
-        #main .box ul.list li h6.manga-name {
+        #main .box ul.list li h3.manga-name {
             font-size: 0.85em;
             font-weight: bolder;
             margin: 0 0 5px 0;
             padding: 0;
         }
 
-        #main .box ul.list li:hover h6.manga-name, #main .box ul.list li:focus h6.manga-name, #main .box ul.list li:active h6.manga-name {
+        #main .box ul.list li:hover h3.manga-name, #main .box ul.list li:focus h3.manga-name, #main .box ul.list li:active h3.manga-name {
             color: #1482d4;
         }
 
@@ -406,10 +422,11 @@ ul {
     padding-right: 30px;
 }
 
-#main h4.title {
+#main h2.title, #main .list-content h1.title, #main .comment-face h4.title, #main .comment-webtruyen h4.title {
     color: #008bcf;
     font-size: 2em;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 #main .manga-intro img.manga-intro-img {
@@ -687,7 +704,6 @@ ul {
 
 #main .aside-right .voted-box {
     margin: 0 0 40px 5px;
-    width: 290px;
 }
 
 #main ul.sub-nav {
@@ -734,14 +750,18 @@ ul {
     margin: 0 10px;
 }
 
-#main .list-content h4.title {
+#main .list-content ul.sub-nav {
+    padding-top: 0;
+}
+
+#main .list-content h2.title, #main .list-content h1.title {
     margin: 10px;
 }
 
 #main .list-content p.intro {
     line-height: 1.2em;
     font-size: 1.1em;
-    padding: 0 0 5px 0;
+    padding: 0 0 10px 0;
 }
 
 #main .list-content .list-fiction .table {
@@ -781,18 +801,18 @@ ul {
     margin-right: 7px;
 }
 
-#main .list-content h6.title {
+#main .list-content h3.title {
     margin: 0 0 5px 0;
     padding: 0;
 }
 
-    #main .list-content h6.title a {
+    #main .list-content h3.title a {
         color: #000;
-        font-size: 1.2em;
+        font-size: 0.6em;
         font-weight: bold;
     }
 
-        #main .list-content h6.title a:hover, #main .list-content h6.title a:focus {
+        #main .list-content h3.title a:hover, #main .list-content h3.title a:focus {
             color: #1482d4;
         }
 
@@ -878,14 +898,19 @@ ul {
     padding: 15px;
 }
 
-#main .list-content .fiction-content h4.title,
-#main .list-content .fiction-content ul.sub-nav {
+#main .fiction-content h2.title,
+#main .fiction-content ul.sub-nav {
     margin-left: 0;
+}
+
+#main .fiction-content .fiction-intro h2.title {
+    font-size: 1.5em;
 }
 
 #main .fiction-content .fiction-intro img.fiction-img {
     margin: 0 20px 10px 0;
 }
+
 
 #main .fiction-content .fiction-intro h5.title,
 #main .fiction-content .fiction-chapters-recent h5.title,
@@ -1112,13 +1137,13 @@ ul {
     padding-bottom: 10px;
 }
 
-/* Fiction Content */
+/* Detail */
 #main .fiction-content.box, #main .about-poster.box {
     margin: 0;
     position: relative;
 }
 
-    #main .fiction-content.box h4.box-title, #main .about-poster.box h4.box-title {
+    #main .fiction-content.box h2.box-title, #main .about-poster.box h2.box-title {
         width: 50%;
     }
 
@@ -1154,18 +1179,18 @@ ul {
     text-align: left;
 }
 
-#main .fiction-content h2.fiction-title, #main .fiction-content h5.fiction-author, #main .fiction-content h3.fiction-chapter {
+#main .fiction-content h1.fiction-title, #main .fiction-content h2.fiction-author, #main .fiction-content h3.fiction-chapter {
     color: #008acf;
     font-weight: bold;
 }
 
-#main .fiction-content h2.fiction-title {
+#main .fiction-content h1.fiction-title {
     margin-bottom: 0;
     text-align: center;
     text-transform: uppercase;
 }
 
-#main .fiction-content h5.fiction-author {
+#main .fiction-content h2.fiction-author {
     font-size: 0.85em;
     margin-top: 5px;
     text-align: center;
@@ -1283,7 +1308,7 @@ ul {
 
 /* page fiction content - poster information */
 
-#main .about-poster.box h4.box-title {
+#main .about-poster.box h2.box-title {
     width: 30%;
 }
 
@@ -1335,8 +1360,14 @@ ul {
 }
 
 /* comment box */
+
+.container .about-poster h4.box-title {
+    width: 30%;    
+}
+
 #main div.comment-face div.box h4.title, #main div.comment-webtruyen div.box h4.title {
     font-size: 1.2em;
+    margin-top: 0;
 }
 #main div.comment-face div.box, #main div.comment-webtruyen div.box {
     border-radius: 0;
@@ -1380,7 +1411,7 @@ ul {
     width: 66.66666666%;
 }
 
-#main div.comment-face div.box h4.box-title, #main div.comment-webtruyen div.box h4.box-title {
+#main div.comment-face div.box h2.box-title, #main div.comment-webtruyen div.box h2.box-title {
     width: 50%;
 }
 
@@ -1476,7 +1507,7 @@ ul {
     margin: 0 5px 5px 0;
 }
 
-#main .form_register h4.box-title {
+#main .form_register h2.box-title {
     width: 30%;
 }
 
@@ -1503,7 +1534,7 @@ ul {
         height: auto;
     }
 
-    #main .col-lg-8 .box h4.box-title {
+    #main .col-lg-8 .box h2.box-title {
         width: 90%;
     }
 
@@ -1609,12 +1640,12 @@ ul {
             margin-bottom: 10px;
         }
 
-        #main .box h4.box-title {
+        #main .box h2.box-title {
             font-size: 1.1em;
             text-indent: 0;
         }
 
-        #main .form_register h4.box-title {
+        #main .form_register h2.box-title {
             text-indent: 10px;
         }
 
@@ -1694,24 +1725,21 @@ ul {
     .navbar-nav {
         margin: 0;
     }
-
-    #main .box {
-        margin: 0 30px 0 15px;
+    
+    #nav nav ul.menu > li > a {
+        margin-right: 20px;
     }
-
-    #main .col-lg-4 {
-        width: 270px;
+    
+    #main .fiction-content .fiction-intro ul.star-rate {
+        padding-right: 120px;
     }
-
-    #main .col-lg-8 {
-        width: 615px;
+    
+    #main .aside-right .voted-box, #main .advert-right {
+        margin-bottom: 30px;
     }
-
-    #main div.most-read-box {
-        margin-left: 30px;
+    
+    #main h4.fiction-content-endline::before, #main h4.fiction-content-endline::after {
+        width: 15%;
     }
-
-    #main div.advert-box {
-        margin-left: 10px;
-    }
+     
 }
