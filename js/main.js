@@ -21,4 +21,7 @@
         appendTo: 'ul.menu > li.search',
         source: suggestions  
     });
+
+
+    $('#nav .navbar-toggle').collapse();
 });

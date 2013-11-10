@@ -27,8 +27,11 @@ ul {
         margin: -35px 0 0 20px;
     }
 
-    #nav nav {
+    #nav .container {
         background: url(../img/nav_bg.png) repeat-x 0 0;
+    }
+
+    #nav nav {
         padding-left: 170px;
     }
 
@@ -132,12 +135,12 @@ ul {
             margin: 0;
             padding-left: 20px;
         }
-                
+
         #nav nav ul.menu > li > a.logout-link {
             margin: 0;
             padding-right: 0;
         }
-        
+
     #nav nav ul.menu > li.search .btn {
         border: none;
         height: 20px;
@@ -239,19 +242,19 @@ ul {
     width: 362px;
 }
 
-#nav nav ul.menu a.cate-btn + ul.dropdown-menu li {
-    display: inline-block;
-    float: left;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    width: 120px;
-}
+    #nav nav ul.menu a.cate-btn + ul.dropdown-menu li {
+        display: inline-block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 120px;
+    }
 
-#nav nav ul.menu a.cate-btn + ul.dropdown-menu > li > a {
-    padding: 5px;
-    text-indent: 5px;
-}
+    #nav nav ul.menu a.cate-btn + ul.dropdown-menu > li > a {
+        padding: 5px;
+        text-indent: 5px;
+    }
 
 #nav nav ul.menu li:hover > ul.dropdown-menu:not(.search-by-list),
 #nav nav ul.menu li:focus > ul.dropdown-menu:not(.search-by-list),
@@ -263,7 +266,7 @@ ul {
 }
 
 #nav nav ul.menu > li > a.login-link, #nav nav ul.menu > li > a.register-link {
-        display: none;
+    display: none;
 }
 
 /* Main */
@@ -282,37 +285,37 @@ ul {
     position: relative;
 }
 
-.container .box.title-bg {
-    padding-top: 50px;
-}
+    .container .box.title-bg {
+        padding-top: 50px;
+    }
 
-.container .box.borderRounded {
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    -moz-border-radius: 10px;
-}
+    .container .box.borderRounded {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        -moz-border-radius: 10px;
+    }
 
-/* white box, round border, title */
-.container .box h2.box-title, .container .about-poster h4.box-title {
-    background: url(../img/bg_title_box.png) repeat-x 0 0;
-    color: #fff;
-    left: 0;
-    height: 35px;
-    font: normal normal normal 1.25em/35px Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-    position: absolute;
-    text-indent: 5px;
-    top: 0;
-    width: 100%;
-}
+    /* white box, round border, title */
+    .container .box h2.box-title, .container .about-poster h4.box-title {
+        background: url(../img/bg_title_box.png) repeat-x 0 0;
+        color: #fff;
+        left: 0;
+        height: 35px;
+        font: normal normal normal 1.25em/35px Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+        position: absolute;
+        text-indent: 5px;
+        top: 0;
+        width: 100%;
+    }
 
 #main .col-lg-8 .box h2.box-title, #main .list-content h2.box-title, .container .about-poster h4.box-title {
     width: 50%;
 }
 
-#main .box h2.box-title:before, #main .box h2.box-title:not(.borderRightNone):after, 
+#main .box h2.box-title:before, #main .box h2.box-title:not(.borderRightNone):after,
 #main .about-poster h4.box-title:before {
     background: url(../img/bg_title_box_leftright.png) no-repeat 0 0;
     content: "";
@@ -768,9 +771,9 @@ ul {
     margin: 0;
 }
 
-#main .list-content .list-fiction .table tbody > tr > td {
-    border-top: none;
-}
+    #main .list-content .list-fiction .table tbody > tr > td {
+        border-top: none;
+    }
 
 #main .list-content .list-fiction .background:nth-child(odd) {
     background-color: #f3f3f3;
@@ -1362,13 +1365,14 @@ ul {
 /* comment box */
 
 .container .about-poster h4.box-title {
-    width: 30%;    
+    width: 30%;
 }
 
 #main div.comment-face div.box h4.title, #main div.comment-webtruyen div.box h4.title {
     font-size: 1.2em;
     margin-top: 0;
 }
+
 #main div.comment-face div.box, #main div.comment-webtruyen div.box {
     border-radius: 0;
     -moz-border-radius: 0;
@@ -1521,13 +1525,57 @@ ul {
         width: 320px;
     }
 
+    #main {
+        padding: 0;
+    }
+
     .navbar-nav {
         margin: 0;
     }
 
+    #nav .container {
+        text-align: right;
+    }
+
+    #nav nav {
+        background-color: #008dd2;
+        margin: 0;
+        overflow-y: visible;
+        padding: 0 15px;
+        text-align: left;
+        width: 320px;
+    }
+
+        #nav nav ul.menu > li {
+            width: 100%;
+        }
+
+            #nav nav ul.menu > li > a {
+                margin-right: 0;
+            }
+
+                #nav nav ul.menu > li > a.login-link,
+                #nav nav ul.menu > li > a.register-link,
+                #nav nav ul.menu > li > a.personal-btn,
+                #nav nav ul.menu > li > a.logout-link {
+                    padding-left: 0;
+                }
+
+            #nav nav ul.menu > li input.search-field {
+                width: 200px;
+            }
+
+            #nav nav ul.menu > li input.submit-btn {
+                margin-right: -15px;
+            }
+
+        #nav nav ul.menu a.cate-btn + ul.dropdown-menu {
+            width: 250px;
+        }
+
     #main .box {
         margin-bottom: 5px;
-        width: 280px;
+        /*width: 280px;*/
     }
 
     #main .manga-intro .box {
@@ -1560,6 +1608,7 @@ ul {
 
     /* menu */
     .navbar-toggle {
+        float: none;
         margin: 2px 5px 8px 0;
     }
 
@@ -1570,9 +1619,36 @@ ul {
         .navbar-toggle .icon-bar {
             background-color: #fff;
         }
+
+        .navbar-toggle:before, .navbar-toggle:after {
+            display: table;
+            content: " ";
+        }
+
+        .navbar-toggle:after {
+            clear: both;
+        }
+
+    .container .about-poster h4.box-title {
+        width: 70%;
+    }
+
+    #main .fiction-content ul.sub-nav, #main .fiction-content h3.fiction-chapter {
+        text-align: center;
+    }
+
+    #main .fiction-content.box ul.zoom-nav {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    #main .comment-face {
+        margin-bottom: 10px;
+    }
 }
 /* Tablets (≥768px) .col-sm-*/
-@media screen and (min-width: 766px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
     .container {
         width: 768px;
         max-width: 768px;
@@ -1607,15 +1683,28 @@ ul {
         width: 25px;
     }
 
-    #nav nav ul.menu > li > a.login-link, #nav nav ul.menu > li > a.register-link {
+    #nav nav ul.menu > li > a.register-link {
         padding: 10px 5px 11px 5px;
+    }
+
+    #nav nav ul.menu > li > a.login-link {
+        padding: 10px 15px 11px 15px;
+    }
+
+    #nav nav ul.menu > li > a.logout-link {
+        padding: 10px 0 11px 5px;
     }
 
     #nav nav ul.menu > li > a.personal-btn {
         padding: 10px 20px 11px 10px;
     }
 
-    #nav nav ul.menu > li ul.dropdown-menu {
+    #nav nav ul.menu > li > a.cate-btn + ul.dropdown-menu {
+        left: 0;
+        right: auto;
+    }
+
+    #nav nav ul.menu > li > a.personal-btn + ul.dropdown-menu {
         left: auto;
         right: 0;
     }
@@ -1623,22 +1712,6 @@ ul {
     #main {
         padding: 0 5px 35px 5px;
     }
-
-        #main .box {
-            margin: 0 25px 0 15px;
-        }
-
-        #main .contact-col div.box {
-            margin: 0 0 0 15px;
-        }
-
-        #main .manga-intro .box:last-child {
-            margin-right: 25px;
-        }
-
-        #main .manga-intro .box {
-            margin-bottom: 10px;
-        }
 
         #main .box h2.box-title {
             font-size: 1.1em;
@@ -1649,67 +1722,6 @@ ul {
             text-indent: 10px;
         }
 
-        #main .last-row .col-sm-4 {
-            float: left;
-            width: 220px;
-        }
-
-        #main .last-row .contact-col {
-            margin-right: 30px;
-        }
-
-        #main .col-sm-8 {
-            width: 520px;
-        }
-
-        #main div.most-read-box, #main div.advert-box {
-            margin-left: 15px;
-        }
-
-        #main .advert-right {
-            margin-bottom: 15px;
-        }
-
-        #main div.advert-box a:last-child {
-            display: block;
-        }
-
-        #main .contact-col p.contact-links {
-            line-height: normal;
-        }
-
-        #main .cate-col {
-            padding-bottom: 65px;
-            padding-top: 65px;
-        }
-
-            #main .cate-col .cate-link {
-                padding-left: 10px;
-            }
-
-                #main .cate-col .cate-link:before {
-                    margin-right: 5px;
-                }
-
-        #main .comment-col.box ul.list {
-            padding: 0;
-        }
-
-            #main .comment-col.box ul.list li {
-                float: left;
-                height: 50px;
-                padding-right: 20px;
-                overflow: hidden;
-            }
-
-                #main .comment-col.box ul.list li:after {
-                    right: 0;
-                }
-
-        #main .box p.manga-newsComment {
-            line-height: 11px;
-        }
-
         #main .fiction-content h4.fiction-content-endline:before,
         #main .fiction-content h4.fiction-content-endline:after {
             width: 7%;
@@ -1718,6 +1730,10 @@ ul {
         #main .comment-webtruyen .comments-content, #main .comment-webtruyen p {
             padding-left: 20px;
         }
+
+        #main .contact-col a.contact-email {
+            font-size: 0.85em;
+        }
 }
 
 /* Desktops (≥992px) .col-md-*/
@@ -1725,21 +1741,20 @@ ul {
     .navbar-nav {
         margin: 0;
     }
-    
+
     #nav nav ul.menu > li > a {
         margin-right: 20px;
     }
-    
+
     #main .fiction-content .fiction-intro ul.star-rate {
         padding-right: 120px;
     }
-    
+
     #main .aside-right .voted-box, #main .advert-right {
         margin-bottom: 30px;
     }
-    
+
     #main h4.fiction-content-endline::before, #main h4.fiction-content-endline::after {
         width: 15%;
     }
-     
 }
