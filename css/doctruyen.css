@@ -219,7 +219,6 @@ ul {
         -ms-border-radius: 7px;
         -o-border-radius: 7px;
         -moz-border-radius: 7px;
-        float: left;
         margin: 10px 0 0 -11px;
         height: 20px;
         position: relative;
@@ -1566,7 +1565,7 @@ ul {
             }
 
             #nav nav ul.menu > li input.submit-btn {
-                margin-right: -15px;
+                margin-left: -15px;
             }
 
         #nav nav ul.menu a.cate-btn + ul.dropdown-menu {
