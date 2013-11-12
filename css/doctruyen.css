@@ -370,7 +370,9 @@ ul {
             background-position: 0 -16px;
         }
 
-        #main .box ul.list li a.manga-link {
+        #main .box ul.list li a.manga-link, 
+        #main .profile-work-list a.manga-link, 
+        #main .profile-page ul.list-follow a.manga-link {
             display: block;
             height: 100%;
             left: 0;
@@ -382,7 +384,9 @@ ul {
             width: 100%;
         }
 
-        #main .box ul.list li img.manga-img {
+        #main .box ul.list li img.manga-img, 
+        #main .profile-work-list img.manga-img, 
+        #main .profile-page ul.list-follow img.manga-img {
             border: 1px solid #989898;
             float: left;
             height: 45px;
@@ -390,18 +394,30 @@ ul {
             width: 40px;
         }
 
-        #main .box ul.list li h3.manga-name {
+        #main .box ul.list li h3.manga-name, 
+        #main .profile-work-list h3.manga-name, 
+        #main .profile-page ul.list-follow h3.manga-name{
             font-size: 0.85em;
             font-weight: bolder;
             margin: 0 0 5px 0;
             padding: 0;
         }
 
-        #main .box ul.list li:hover h3.manga-name, #main .box ul.list li:focus h3.manga-name, #main .box ul.list li:active h3.manga-name {
+        #main .box ul.list li:hover h3.manga-name, 
+        #main .box ul.list li:focus h3.manga-name, 
+        #main .box ul.list li:active h3.manga-name,
+        #main .profile-work-list li:hover h3.manga-name, 
+        #main .profile-work-list li:focus h3.manga-name, 
+        #main .profile-work-list li.active h3.manga-name,
+        #main .profile-page ul.list-follow li:hover h3.manga-name, 
+        #main .profile-page ul.list-follow li:focus h3.manga-name, 
+        #main .profile-page ul.list-follow li.active h3.manga-name {
             color: #1482d4;
         }
 
-        #main .box ul.list li p.manga-chapter {
+        #main .box ul.list li p.manga-chapter, 
+        #main .profile-work-list p.manga-chapter,
+        #main .profile-page ul.list-follow p.manga-chapter {
             font-size: 0.75em;
             margin: 5px 0 0 0;
             padding: 0;
@@ -424,7 +440,10 @@ ul {
     padding-right: 30px;
 }
 
-#main h2.title, #main .list-content h1.title, #main .comment-face h4.title, #main .comment-webtruyen h4.title {
+#main h2.title, #main .list-content h1.title, 
+#main .comment-face h4.title, 
+#main .comment-webtruyen h4.title,
+#main .profile-page .profile-comment-webtruyen h4.title {
     color: #008bcf;
     font-size: 2em;
     font-weight: bold;
@@ -518,7 +537,9 @@ ul {
         #main .contact-col a.contact-email:before {
             content: "Email: ";
         }
-    #main .contact-col a.contact-email-icon {
+        
+    #main .contact-col a.contact-email-icon,
+    #main .profile-page a.contact-email-icon {
         background: url(../img/icons.png) no-repeat 0 -95px;
         display: block;
         height: 20px;
@@ -1360,13 +1381,16 @@ ul {
         content: " »";
     }
 
-#main .about-poster-buttons a {
+#main .button-like, .button-follow, .button-edit {
     background: url(../img/icons.png) no-repeat -125px -66px;
+    border: none;
     color: #fff;
+    font-size: 0.9em;
     height: 21px;
     display: inline-block;
     line-height: 18px;
     text-align: center;
+    padding: 0;
     width: 50px;
 }
 
@@ -1376,7 +1400,9 @@ ul {
     width: 30%;
 }
 
-#main div.comment-face div.box h4.title, #main div.comment-webtruyen div.box h4.title {
+#main div.comment-face div.box h4.title, 
+#main div.comment-webtruyen div.box h4.title, 
+#main .profile-page .profile-comment-webtruyen h4.title {
     font-size: 1.2em;
     margin-top: 0;
 }
@@ -1394,7 +1420,8 @@ ul {
     height: 100%;
 }
 
-#main .comment-webtruyen .row {
+#main .comment-webtruyen .row, 
+#main .profile-page .profile-comment-webtruyen .row {
     border-bottom: 1px solid #bfbfbf;
     margin: 0 0 10px 0;
 }
@@ -1404,30 +1431,19 @@ ul {
         text-align: center;
     }
 
-#main .comment-webtruyen a.show-more-comment {
+#main .comment-webtruyen a.show-more-comment{
     background: url(../img/icons.png) no-repeat -162px -240px;
     display: inline-block;
     height: 28px;
     width: 28px;
 }
 
-#main .comment-webtruyen .col-lg-4,
-#main .comment-webtruyen .col-md-4,
-#main .comment-webtruyen .col-sm-4 {
-    width: 33.33333333%;
-}
-
-#main .comment-webtruyen .col-lg-8,
-#main .comment-webtruyen .col-md-8,
-#main .comment-webtruyen .col-sm-8 {
-    width: 66.66666666%;
-}
-
 #main div.comment-face div.box h2.box-title, #main div.comment-webtruyen div.box h2.box-title {
     width: 50%;
 }
 
-#main .comment-webtruyen img.img-responsive {
+#main .comment-webtruyen img.img-responsive,
+#main .profile-page .profile-comment-webtruyen img.img-responsive {
     border: none;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -1437,19 +1453,22 @@ ul {
     padding: 0;
 }
 
-#main .comment-webtruyen textarea.comment-box {
+#main .comment-webtruyen textarea.comment-box,
+#main .profile-page .profile-comment-webtruyen textarea.comment-box {
     color: #000;
     height: 65px;
     margin-bottom: 10px;
     width: 100%;
 }
 
-    #main .comment-webtruyen textarea.comment-box + p {
+    #main .comment-webtruyen textarea.comment-box + p,
+    #main .profile-page .profile-comment-webtruyen textarea.comment-box + p{
         padding-right: 15px;
         text-align: right;
     }
 
-#main .comment-webtruyen button {
+#main .comment-webtruyen button,
+#main .profile-page .profile-comment-webtruyen button {
     background: url(../img/icons.png) no-repeat 0 -244px;
     font-size: 0.85em;
     border: none;
@@ -1457,7 +1476,8 @@ ul {
     padding: 0;
 }
 
-    #main .comment-webtruyen button.btn-post {
+    #main .comment-webtruyen button.btn-post,
+    #main .profile-page .profile-comment-webtruyen button.btn-post{
         background-position: -1px -242px;
         color: #276a85;
         height: 28px;
@@ -1465,7 +1485,8 @@ ul {
         width: 74px;
     }
 
-    #main .comment-webtruyen button.btn-del {
+    #main .comment-webtruyen button.btn-del,
+    #main .profile-page .profile-comment-webtruyen button.btn-del {
         background-position: -75px -244px;
         color: #fff;
         height: 24px;
@@ -1473,7 +1494,10 @@ ul {
         width: 72px;
     }
 
-#main .comment-webtruyen .comments-content, #main .comment-webtruyen p {
+#main .comment-webtruyen .comments-content, 
+#main .comment-webtruyen p,
+#main .profile-page .profile-comment-webtruyen .comments-content,
+#main .profile-page .profile-comment-webtruyen p {
     font-size: 0.9em;
     line-height: 1em;
     overflow: hidden;
@@ -1481,19 +1505,19 @@ ul {
     padding-left: 10px;
 }
 
-#main .comment-webtruyen .textLightBlue {
+#main .comment-webtruyen .textLightBlue,
+#main .profile-page .profile-comment-webtruyen .textLightBlue{
     color: #0085ca;
     font-weight: bold;
 }
 
-#main .comment-webtruyen span.name {
-}
-
-#main .comment-webtruyen span.date-time {
+#main .comment-webtruyen span.date-time,
+#main .profile-page .profile-comment-webtruyen span.date-time {
     font-size: 0.8em;
 }
 
-#main .comment-webtruyen .comments-content + p {
+#main .comment-webtruyen .comments-content + p,
+#main .profile-page .profile-comment-webtruyen .comments-content + p {
     text-align: right;
 }
 
@@ -1525,6 +1549,156 @@ ul {
 
 #main .form_register .form-control {
     margin: 5px 0;
+}
+
+/* PROFILE */
+
+#main .profile-page .box {
+    padding: 10px 15px;
+}
+
+#main .profile-page .profile-info img.thumbnail {
+    height: 145px;
+    margin-right: 15px;
+    width: 145px;
+}
+
+#main .profile-page .profile-info h5.name {
+    font-size: 1.65em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#main .profile-page .profile-info p {
+    font-size: 1em;
+}
+
+
+#main .profile-page .profile-info .email a.hidden-xs {
+    display: inline-block !important;
+    white-space: nowrap;
+}
+
+#main .profile-page .profile-info .email:before {
+    content: "Email: ";
+}
+
+#main .profile-page .profile-info .like-num:before {
+    content: "Like: ";
+}
+
+#main .profile-page .profile-info .follow-num:before {
+    content: "Follow: ";
+}
+
+#main .profile-page .small-box {
+    border: 1px solid #aeaeae;
+    border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 5px;
+}
+
+#main .profile-page .small-box h5.title {
+    border-bottom: 1px solid #aeaeae;
+    color: #008bcf;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#main .profile-page .small-box a {
+    color: #000;
+    font-size: 0.75em;
+}
+
+#main .profile-page .small-box a:not(:last-child):after {
+    content: ","
+}
+
+#main .profile-page .small-box a:last-child:not(.view-all):after {
+    content: "..."
+}
+
+#main .profile-page .small-box p.tags {
+    line-height: 0.8em;
+}
+
+#main .profile-page .small-box p:last-child:not(.manga-chapter) {
+    text-align: right;
+    margin: 0;
+}
+
+#main .profile-page a.view-all {
+    color: #3a8caf;
+    font-size: 0.9em;
+    padding-right: 5px;
+}
+
+#main .profile-page a.view-all:after {
+    transform: rotate(-85deg) translateY(5px);
+    -o-transform: rotate(-85deg) translateY(5px);
+    -ms-transform: rotate(-85deg) translateY(5px);
+    -moz-transform: rotate(-85deg) translateY(5px);
+    -webkit-transform: rotate(-85deg) translateY(5px);
+    background: url(../img/icons.png) no-repeat -162px -243px;
+    content: "";
+    display: inline-block;
+    height: 28px;
+    vertical-align: middle;
+    width: 28px;
+}
+
+#main .profile-page .profile-work-list {
+    border-bottom: 1px solid #979797;
+    border-top: 1px solid #979797;
+    margin: 15px 0;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+#main .profile-work-list h4.title {
+    color: #008bcf;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+#main .profile-work-list h4.title a.view-all {
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+#main .profile-page ul.list-follow {
+    overflow: hidden;
+    padding: 0;
+}
+
+#main .profile-work-list div.list-work > .row > .col-xs-12 {
+    margin-bottom: 10px;
+}
+
+#main .profile-page .profile-other .small-box {
+    margin-bottom: 10px;
+}
+
+#main .profile-page ul.list-follow li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#main .profile-page ul.list-follow li:before, #main .profile-page ul.list-follow li:after,
+#main .profile-work-list div.list-work > .row > .col-xs-12:before, #main .profile-work-list div.list-work > .row > .col-xs-12:after {
+    display: table;
+    content: "";
+}
+
+#main .profile-page ul.list-follow li:after, 
+#main .profile-work-list div.list-work > .row > .col-xs-12:after {
+    clear: both;
 }
 
 /* Mobiles */
@@ -1612,6 +1786,14 @@ ul {
     #main h4.fiction-content-endline:before,
     #main h4.fiction-content-endline:after {
         display: none;
+    }
+    
+    #main .profile-page .profile-info .email a.hidden-xs {
+        display: none !important;
+    }
+    
+    #main .profile-page .profile-info .email a.hidden-sm  {
+        display: inline-block !important;
     }
 
     /* menu */
