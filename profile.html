@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Đọc Truyện Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/doctruyen.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <div class="container">
+        <header id="nav">
+            <h1><img class="logo pull-left img-responsive" alt="webtruyen logo" src="img/logo.png" /></h1>
+            <div class="container">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <nav class="navbar-collapse collapse bs-navbar-collapse" role="navigation">
+                    <ul class="menu nav navbar-nav">
+                        <li>
+                            <a class="sort-btn">Sắp xếp</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Truyện mới</a></li>
+                                <li><a href="#">Truyện hot</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="cate-btn">Thể loại</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Tiên Hiệp</a></li>
+                                <li><a href="#">Kiếm Hiệp</a></li>
+                                <li><a href="#">Đô Thị</a></li>
+                                <li><a href="#">Trinh Thám</a></li>
+                                <li><a href="#">Võng Du</a></li>
+                                <li><a href="#">Huyền Huyễn</a></li>
+                                <li><a href="#">Dị Giới</a></li>
+                                <li><a href="#">Khoa Huyễn</a></li>
+                                <li><a href="#">Ngôn Tình</a></li>
+                                <li><a href="#">Quân Sự</a></li>
+                                <li><a href="#">Lịch Sử</a></li>
+                                <li><a href="#">Tản Văn</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="post-btn">Đăng truyện</a></li>
+                        <li class="search">
+                            <button class="btn btn-default dropdown-toggle pull-left search-by" data-toggle="dropdown" type="button">
+                                Tìm truyện
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu search-by-list">
+                                <li><a href="#">Tìm truyện</a></li>
+                                <li><a href="#">Tên tác giả</a></li>
+                                <li><a href="#">Tên truyện</a></li>
+                            </ul>
+                            <input class="search-field form-control pull-left" type="text" />
+                            <input class="submit-btn pull-left" type="submit" value="" />
+                        </li>
+                        <li><a class="login-link" href="#login_form">Đăng nhập</a></li>
+                        <li><a class="register-link" href="#register_form">Đăng ký</a></li>
+                        <li>
+                            <a class="personal-btn">Cá nhân</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Tên thành viên</a></li>
+                                <li><a href="#">Thông báo</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Truyện đang làm</a></li>
+                                <li><a href="#">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="logout-link" href="#">Đăng xuất</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="main">
+            <div class="row content">
+                <div class="col-md-8 col-lg-8 col-sm-12 list-content">
+                    <div class="box">
+                        <h1 class="title">
+                            Thông tin cá nhân</h1>
+                        <div class="profile-info">
+                            <img class="img-responsive thumbnail" src="" alt="" />
+                            <h4>
+                                Châu Quốc Đạt</h4>
+                            <p class="email">
+                                <a href="mailto:abc@yahoo.com">abc@yahoo.com</a></p>
+                            <p class="like-num">
+                                18467373</p>
+                            <p class="follow-num">
+                                4313</p>
+                            <p class="profile-btn">
+                                <button class="profile-edit-btn">
+                                    Edit</button>
+                                <button class="profile-follow-btn">
+                                    Follow</button>
+                            </p>
+                            <div class="small-box">
+                                <h5>
+                                    Danh sách thành viên theo dõi</h5>
+                                <p>
+                                    <a href="#">Duy</a> <a href="#">Dương</a> <a href="#">Thanh</a> <a href="#">Mẫn</a>
+                                    <a href="#">Châu</a> <a href="#">Cường</a> <a href="#">Cương</a> <a href="#">Hiếu</a>
+                                    <a href="#">Hà</a> <a href="#">Duy</a> <a href="#">Dương</a> <a href="#">Thanh</a>
+                                    <a href="#">Mẫn</a> <a href="#">Châu</a> <a href="#">Cường</a> <a href="#">Cương</a>
+                                    <a href="#">Hiếu</a> <a href="#">Hà</a> <a href="#">Duy</a> <a href="#">Dương</a>
+                                    <a href="#">Thanh</a> <a href="#">Mẫn</a> <a href="#">Châu</a> <a href="#">Cường</a>
+                                    <a href="#">Cương</a> <a href="#">Hiếu</a> <a href="#">Hà</a> <a href="#">Duy</a>
+                                    <a href="#">Dương</a> <a href="#">Thanh</a> <a href="#">Mẫn</a> <a href="#">Châu</a>
+                                    <a href="#">Cường</a> <a href="#">Cương</a> <a href="#">Hiếu</a> <a href="#">Hà</a>
+                                    <a href="#">Duy</a> <a href="#">Dương</a> <a href="#">Thanh</a> <a href="#">Mẫn</a>
+                                    <a href="#">Châu</a> <a href="#">Cường</a> <a href="#">Cương</a> <a href="#">Hiếu</a>
+                                    <a href="#">Hà</a><a href="#">Duy</a> <a href="#">Dương</a> <a href="#">Thanh</a>
+                                    <a href="#">Mẫn</a> <a href="#">Châu</a><a href="#">Cường</a> <a href="#">Cương</a>
+                                    <a href="#">Hiếu</a> <a href="#">Hà</a><a href="#">Cường</a> <a href="#">Cương</a>
+                                </p>
+                                <p>
+                                    <a class="view-all" href="#">xem hết</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="profile-work-list">
+                            <h4 class="title">
+                                Các truyện đã và đang thực hiện</h4>
+                            <ul class="list-work">
+                                <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                    <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                    <h3 class="manga-name">
+                                        La Phù</h3>
+                                    <p class="manga-chapter">
+                                        Chuong 255
+                                    </p>
+                                </li>
+                                <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                    <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                    <h3 class="manga-name">
+                                        La Phù</h3>
+                                    <p class="manga-chapter">
+                                        Chuong 255
+                                    </p>
+                                </li>
+                                <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                    <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                    <h3 class="manga-name">
+                                        La Phù</h3>
+                                    <p class="manga-chapter">
+                                        Chuong 255
+                                    </p>
+                                </li>
+                                <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                    <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                    <h3 class="manga-name">
+                                        La Phù</h3>
+                                    <p class="manga-chapter">
+                                        Chuong 255
+                                    </p>
+                                </li>
+                                <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                    <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                    <h3 class="manga-name">
+                                        La Phù</h3>
+                                    <p class="manga-chapter">
+                                        Chuong 255
+                                    </p>
+                                </li>
+                                <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                    <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                    <h3 class="manga-name">
+                                        La Phù</h3>
+                                    <p class="manga-chapter">
+                                        Chuong 255
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="profile-comment-other">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 col-sm-4 profile-other">
+                                    <div class="small-box">
+                                        <h4 class="title">
+                                            Đang theo dõi các thành viên
+                                        </h4>
+                                        <p>
+                                            <a href="#">Duy</a> <a href="#">Dương</a> <a href="#">Thanh</a> <a href="#">Mẫn</a>
+                                            <a href="#">Châu</a> <a href="#">Cường</a> <a href="#">Cương</a> <a href="#">Hiếu</a>
+                                            <a href="#">Hà</a> <a href="#">Duy</a> <a href="#">Dương</a> <a href="#">Thanh</a>
+                                            <a href="#">Mẫn</a> <a href="#">Châu</a> <a href="#">Cường</a> <a href="#">Cương</a>
+                                            <a href="#">Hiếu</a> <a href="#">Hà</a> <a href="#">Duy</a> <a href="#">Dương</a>
+                                            <a href="#">Thanh</a> <a href="#">Mẫn</a> <a href="#">Châu</a> <a href="#">Cường</a>
+                                            <a href="#">Cương</a> <a href="#">Hiếu</a> <a href="#">Hà</a> <a href="#">Duy</a>
+                                        </p>
+                                        <p>
+                                            <a class="view-all">xem hết</a>
+                                        </p>
+                                    </div>
+                                    <div class="small-box">
+                                        <h4>
+                                            Các truyện đang theo dõi
+                                        </h4>
+                                        <ul class="list-follow">
+                                            <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                                <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                                <h3 class="manga-name">
+                                                    La Phù</h3>
+                                                <p class="manga-chapter">
+                                                    Chuong 255
+                                                </p>
+                                            </li>
+                                            <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                                <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                                <h3 class="manga-name">
+                                                    La Phù</h3>
+                                                <p class="manga-chapter">
+                                                    Chuong 255
+                                                </p>
+                                            </li>
+                                            <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                                <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                                <h3 class="manga-name">
+                                                    La Phù</h3>
+                                                <p class="manga-chapter">
+                                                    Chuong 255
+                                                </p>
+                                            </li>
+                                            <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                                <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                                <h3 class="manga-name">
+                                                    La Phù</h3>
+                                                <p class="manga-chapter">
+                                                    Chuong 255
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            <a class="view-all">xem hết</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-8 col-sm8 profile-comment-webtruyen">
+                                    <h4 class="title">
+                                        Comment WebTruyen
+                                    </h4>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <img class="thumbnail img-responsive pull-left" src="img/ava.jpg" alt="" />
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10">
+                                            <textarea class="comment-box" placeholder="Viết bình luận"></textarea>
+                                            <p>
+                                                <button class="btn-post">
+                                                    Đăng
+                                                </button>
+                                                <button class="btn-del">
+                                                    Xóa
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <img class="thumbnail img-responsive pull-left" src="img/ava.jpg" alt="" />
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10">
+                                            <p>
+                                                <span class="name textLightBlue pull-left">Name</span><span class="date-time textLightBlue pull-right">
+                                                    Gửi lúc 23:10 Ngày 02/10/2013 </span>
+                                            </p>
+                                            <div class="comments-content">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. voccaecat
+                                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                                sunt in culpa qui officia deserunt mollit anim id est laborum
+                                            </div>
+                                            <p>
+                                                <a class="like-comment textLightBlue">Thích</a> <a class="reply-comment textLightBlue">
+                                                    Trả lời </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <img class="thumbnail img-responsive pull-left" src="img/ava.jpg" alt="" />
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10">
+                                            <p>
+                                                <span class="name textLightBlue pull-left">Name</span><span class="date-time textLightBlue pull-right">
+                                                    Gửi lúc 23:10 Ngày 02/10/2013 </span>
+                                            </p>
+                                            <div class="comments-content">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. voccaecat
+                                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                            </div>
+                                            <p>
+                                                <a class="like-comment textLightBlue">Thích</a> <a class="reply-comment textLightBlue">
+                                                    Trả lời </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <img class="thumbnail img-responsive pull-left" src="img/ava.jpg" alt="" />
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10">
+                                            <p>
+                                                <span class="name textLightBlue pull-left">Name</span><span class="date-time textLightBlue pull-right">
+                                                    Gửi lúc 23:10 Ngày 02/10/2013 </span>
+                                            </p>
+                                            <div class="comments-content">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. voccaecat
+                                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                            </div>
+                                            <p>
+                                                <a class="like-comment textLightBlue">Thích</a> <a class="reply-comment textLightBlue">
+                                                    Trả lời </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <a class="show-more-comment"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 aside-right hidden-xs hidden-sm">
+                    <div class="box voted-box title-bg borderRounded">
+                        <h2 class="box-title">
+                            Truyện đề cử <a class="readmore" href="#">Xem thêm</a></h2>
+                        <ul class="list">
+                            <li><a class="manga-link" href="#">La phu chuong 255</a>
+                                <img class="manga-img img-responsive" src="img/manga/Untitled-11.jpg" alt="" />
+                                <h3 class="manga-name">
+                                    La Phù</h3>
+                                <p class="manga-chapter">
+                                    Chuong 255
+                                </p>
+                            </li>
+                            <li><a class="manga-link img-responsive" href="#">Tiên Quốc Đại Đế chuong 255</a>
+                                <img class="manga-img" src="img/manga/Untitled-12.jpg" alt="" />
+                                <h3 class="manga-name">
+                                    Tiên Quốc Đại Đế</h3>
+                                <p class="manga-chapter">
+                                    Chuong 255
+                                </p>
+                            </li>
+                            <li><a class="manga-link img-responsive" href="#">Quan Thần chuong 255</a>
+                                <img class="manga-img" src="img/manga/Untitled-13.jpg" alt="" />
+                                <h3 class="manga-name">
+                                    Quan Thần</h3>
+                                <p class="manga-chapter">
+                                    Chuong 255
+                                </p>
+                            </li>
+                            <li><a class="manga-link img-responsive" href="#">Đô Thị Thiếu Soái chuong 255</a>
+                                <img class="manga-img" src="img/manga/Untitled-14.jpg" alt="" />
+                                <h3 class="manga-name">
+                                    Đô Thị Thiếu Soái</h3>
+                                <p class="manga-chapter">
+                                    Chuong 255
+                                </p>
+                            </li>
+                            <li><a class="manga-link img-responsive" href="#">Cuồng Dã Diễm Tiêu Diêu chuong 255</a>
+                                <img class="manga-img" src="img/manga/Untitled-15.jpg" alt="" />
+                                <h3 class="manga-name">
+                                    Cuồng Dã Diễm Tiêu Diêu</h3>
+                                <p class="manga-chapter">
+                                    Chuong 255
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#">
+                        <img class="advert-right img-responsive" src="img/megastarquangcao.jpg" alt="" />
+                    </a><a href="#">
+                        <img class="advert-right img-responsive" src="img/megastarquangcao.jpg" alt="" />
+                    </a>
+                </div>
+            </div>
+            <div class="row footer" role="footer">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 contact-col">
+                                <p>
+                                    <a class="contact-email hidden-xs" href="mailto:trancongduy89@gmail.com">trancongduy89@gmail.com</a>
+                                    <a class="contact-email-icon hidden-lg hidden-md hidden-sm" href="mailto:trancongduy89@gmail.com">
+                                        trancongduy89@gmail.com</a>
+                                </p>
+                                <p>
+                                    <a class="links face" href="#"></a><a class="links twitter" href="#"></a><a class="links google"
+                                        href="#"></a><a class="links linkedIn" href="#"></a><a class="links other1" href="#">
+                                        </a><a class="links other2" href="#"></a>
+                                </p>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 tags">
+                                <p>
+                                    Do thi thieu soai, Cuong da diem tieu dieu, La phu, Tru tien, 365 ngay hon nhan,
+                                    hao mon kinh dong, pham nhan tu tien, hop dong hon nhan 100 ngay, du tinh, bay ngay
+                                    an ai, co vo tong giam doc xinh dep cua toi....
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message">
+                                <h3>
+                                    Webtruyen.com</h3>
+                                <p>
+                                    Website đọc truyện online sưu tầm và cập nhật liên tục các truyện tiên hiệp, truyện
+                                    kiếm hiệp, truyện đô thị từ nhiều nguồn khác nhau trên mạng.Mời bạn đọc và ủng hộ
+                                    website bằng cách giới thiệu đến bạn bè, chúc bạn có những giây phút đọc truyện
+                                    thư giãn thật bổ ích
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#x" class="overlay" id="register_form"></a>
+    <div class="popup popup_register">
+        <h3 class="title">
+            Đăng ký thành viên</h3>
+        <form>
+        <table class="register-table">
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Tên đăng nhập" id="username" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Email" id="email" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control" placeholder="Mật khẩu" id="pass" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" id="pass2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Họ và tên" id="name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Điện thoại" id="phone" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="code-confirm form-control pull-left">
+                    </div>
+                    <input type="text" class="form-control pull-right" placeholder="Nhập mã xác nhận"
+                        id="code_confirm" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="agree_term" />
+                    <span class="agree_term_text">tôi đồng ý với các <a href="#">điều khoản</a> tại
+                    </span><a href="#">doctruyen.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="register-btn btn btn-primary pull-right" value="Đăng ký" type="submit" />
+                    <button class="reset-btn btn btn-default pull-right">
+                        Nhập lại
+                    </button>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <a class="close" href="#close"></a>
+    </div>
+    <a href="#x" class="overlay" id="login_form"></a>
+    <div class="popup popup_login">
+        <h3 class="title">
+            Đăng nhập</h3>
+        <form>
+        <table class="login-table">
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Tên đăng nhập" id="login_username" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control" placeholder="Mật khẩu" id="login_pass" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="login_remember" class="pull-left" /><span class="pull-left">
+                        Ghi nhớ đăng nhập </span><a class="pull-right forgot-pass" href="#">Quên pass ?</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="login_register_btn btn btn-default pull-left">
+                        Đăng ký
+                    </button>
+                    <input type="submit" class="login_btn btn btn-primary pull-right" value="Đăng nhập" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="login_by_face" href="#">đăng nhập bằng facebook</a>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <a class="close" href="#close"></a>
+    </div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/collapse.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

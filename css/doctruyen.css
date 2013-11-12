@@ -518,7 +518,16 @@ ul {
         #main .contact-col a.contact-email:before {
             content: "Email: ";
         }
-
+    #main .contact-col a.contact-email-icon {
+        background: url(../img/icons.png) no-repeat 0 -95px;
+        display: block;
+        height: 20px;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        width: 20px;
+    }
+    
 #main a.links {
     background: url(../img/icons.png) no-repeat;
     display: inline-block;
