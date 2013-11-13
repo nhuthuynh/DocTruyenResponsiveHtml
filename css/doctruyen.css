@@ -285,7 +285,7 @@ ul {
 }
 
     .container .box.title-bg {
-        padding-top: 50px;
+        padding-top: 50px !important;
     }
 
     .container .box.borderRounded {
@@ -560,6 +560,10 @@ ul {
     white-space: nowrap;
 }
 
+    #main a.links.hidden-xs {
+        display: inline-block !important;
+    }
+
     #main a.links.face {
         background-position: -16px 0;
     }
@@ -745,8 +749,6 @@ ul {
 
     #main ul.sub-nav li {
         display: inline-block;
-        margin: 0 0 0 5px;
-        white-space: nowrap;
     }
 
         #main ul.sub-nav li:first-child {
@@ -804,15 +806,23 @@ ul {
         border-top: none;
     }
 
-#main .list-content .list-fiction .background:nth-child(odd) {
-    background-color: #f3f3f3;
-    border: 1px solid #ddd;
-    padding: 5px 15px;
-}
+    #main .list-content .list-fiction .table tbody > tr:nth-child(odd) {
+        background-color: #f3f3f3;
+        border: 1px solid #ddd;
+    }
 
-#main .list-content .list-fiction .background:nth-child(even) {
-    padding: 6px 16px;
-}
+    #main .list-content .list-fiction .table tbody > tr:nth-child(odd) > td {
+        padding: 5px 15px;
+    }
+
+    #main .list-content .list-fiction .table tbody > tr:nth-child(even) > td {
+        padding: 6px 16px;
+    }
+    
+    #main .list-content .list-fiction .table tbody > tr > td:first-child, 
+    #main .list-content .list-fiction .table tbody > tr > td:last-child {
+        width: 50%;
+    }
 
 #main .list-content .row.page-list {
     background: none;
@@ -873,7 +883,6 @@ ul {
             #main .list-content .page-list ul li a:not(.last-page):not(.first-page) {
                 display: block;
                 height: 15px;
-                padding: 0 2px 2px 0;
                 text-align: center;
                 text-indent: 1px;
                 width: 15px;
@@ -882,7 +891,12 @@ ul {
             #main .list-content .page-list ul li a.current-page:not(.last-page):not(.first-page),
             #main .list-content .page-list ul li a:hover:not(.last-page):not(.first-page),
             #main .list-content .page-list ul li a:focus:not(.last-page):not(.first-page) {
-                background: url(../img/icons.png) no-repeat 0 -68px;
+                background-color: #28A0DF;
+                border-radius: 7px;
+                -moz-border-radius: 7px;
+                -ms-border-radius: 7px;
+                -o-border-radius: 7px;
+                -webkit-border-radius: 7px;
                 color: #fff;
             }
 
@@ -902,13 +916,17 @@ ul {
     text-align: center;
 }
 
-    #main .list-content .page-list .page-num a.num {
+    #main .list-content .page-list .page-num input[type="text"].num {
         background: #28a0df;
+        border: none;
         color: #fff;
         font-size: 1em;
         font-weight: bold;
         display: inline-block;
+        margin-right: 5px;
+        outline: none;
         padding: 4px 10px;
+        width: 35px;
     }
 
     #main .list-content .page-list .page-num a.btn-page {
@@ -940,6 +958,7 @@ ul {
 }
 
 #main .fiction-content .fiction-intro img.fiction-img {
+    float:left;
     margin: 0 20px 10px 0;
 }
 
@@ -965,21 +984,22 @@ ul {
 
 #main .fiction-content .fiction-intro ul.star-rate {
     direction: rtl;
-    padding-right: 155px;
+    margin: 0;
+    padding-right: 190px;
 }
 
     #main .fiction-content .fiction-intro ul.star-rate li {
-        background: url(../img/icons.png) no-repeat -103px -40px;
+        background: url(../img/icons.png) no-repeat -101px -20px;
         display: inline-block;
-        height: 24px;
-        width: 24px;
+        height: 20px;
+        width: 20px;
     }
 
         #main .fiction-content .fiction-intro ul.star-rate li:hover,
         #main .fiction-content .fiction-intro ul.star-rate li:hover ~ li,
         #main .fiction-content .fiction-intro ul.star-rate li.selected,
         #main .fiction-content .fiction-intro ul.star-rate li.selected ~ li {
-            background-position: -103px -16px;
+            background-position: -101px 0;
         }
 
 #main .fiction-content .fiction-brief h5.title {
@@ -1023,7 +1043,6 @@ ul {
     border: 1px solid #e3e3e3;
     border-left: none;
     border-right: none;
-    height: 38px;
     line-height: 38px;
     margin-top: 15px;
     margin: 0;
@@ -1039,7 +1058,7 @@ ul {
     color: #10a7e3;
     padding-top: 2px;
     position: relative;
-    text-indent: 35px;
+    padding-left: 35px;
     text-transform: none;
 }
 
@@ -1104,7 +1123,7 @@ ul {
         height: 16px;
         left: 0;
         position: absolute;
-        top: 0;
+        top: 3px;
         width: 16px;
     }
 
@@ -1114,7 +1133,7 @@ ul {
 
     #main .fiction-chapter-list .table td:first-child, #main .fiction-chapter-list .table th:first-child {
         text-align: center;
-        width: 9%;
+        width: 7%;
     }
 
     #main .fiction-chapter-list .table td:nth-child(2), #main .fiction-chapter-list .table th:nth-child(2) {
@@ -1122,12 +1141,16 @@ ul {
     }
 
     #main .fiction-chapter-list .table td:nth-child(3), #main .fiction-chapter-list .table th:nth-child(3) {
-        width: 55%;
+        width: 21%;
+    }
+    
+    #main .fiction-chapter-list .table td:nth-child(4), #main .fiction-chapter-list .table th:nth-child(4) {
+        width: 41%;
     }
 
     #main .fiction-chapter-list .table td:last-child, #main .fiction-chapter-list .table th:last-child {
         text-align: center;
-        width: 15%;
+        width: 10%;
     }
 
 .table thead > tr > th, .table tbody > tr > th,
@@ -1250,6 +1273,11 @@ ul {
 
 #main .fiction-content .fiction-content-nav li {
     background: url(../img/icons.png) no-repeat 0 -219px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-border-radius: 20px;
     display: inline-block;
     height: 22px;
     line-height: 20px;
@@ -1702,7 +1730,7 @@ ul {
 }
 
 /* Mobiles */
-@media screen and (min-width:320px) and (max-width: 765px) {
+@media screen and (min-width:320px) and (max-width: 767px) {
     .container {
         width: 320px;
     }
@@ -1710,7 +1738,97 @@ ul {
     #main {
         padding: 0;
     }
+    
+    #main > .row > .col-xs-12 {
+        padding: 0 5px;
+    }
+    
+    /* Table Responsive */
+    .table-responsive > .table > thead > tr > th, 
+    .table-responsive > .table > tbody > tr > th, 
+    .table-responsive > .table > tfoot > tr > th, 
+    .table-responsive > .table > thead > tr > td, 
+    .table-responsive > .table > tbody > tr > td, 
+    .table-responsive > .table > tfoot > tr > td {
+        white-space: normal;
+    }
+    
+    .table-responsive > .table > tbody > tr > td a, .table-responsive > .table > tbody > tr > td h3.title a {
+        display: block;
+    }
+    
+    #main h2.title, #main .list-content h1.title, #main .comment-face h4.title, #main .comment-webtruyen h4.title {
+        font-size: 1.65em;
+    }
+        
+    #main div.box, #main .box.fiction-content {
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+    
+    #main .about-poster.box.title-bg {
+        padding-top: 50px;
+    }
 
+    #main .manga-intro .box {
+        height: auto;
+    }
+
+    #main .col-lg-8 .box h2.box-title {
+        width: 90%;
+    }
+    
+    #main .manga-intro > div:nth-child(2) {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    #main .manga-intro h5.manga-intro-name {
+        font-size: 1.25em;
+        padding-right: 15px;
+    }
+
+    #main .manga-intro .manga-intro-name a.readmore {
+        display: block;
+        font-size: 0.7em;
+        margin-top: 10px;
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+    
+    #main .manga-intro .manga-intro-name a.readmore:before, #main .manga-intro .manga-intro-name a.readmore:after {
+        display: table;
+        content: "";
+    }
+    
+    #main .manga-intro .manga-intro-name a.readmore:after {
+        clear: both;
+    }
+
+    #main .manga-intro img.manga-intro-img {
+        margin-right: 5px;
+        max-width: 35%;
+    }
+    
+    #main h4.fiction-content-endline {
+        font-size: 1em;
+    }
+
+    #main h4.fiction-content-endline:before,
+    #main h4.fiction-content-endline:after {
+        display: none;
+    }
+    
+    #main .profile-page .profile-info .email a.hidden-xs {
+        display: none !important;
+    }
+    
+    #main .profile-page .profile-info .email a.hidden-sm  {
+        display: inline-block !important;
+    }
+
+    /* menu */
     .navbar-nav {
         margin: 0;
     }
@@ -1718,6 +1836,28 @@ ul {
     #nav .container {
         text-align: right;
     }
+    
+    .navbar-toggle {
+        float: none;
+        margin: 2px 5px 8px 0;
+    }
+
+        .navbar-toggle:hover, .navbar-toggle:focus {
+            background-color: #ddd;
+        }
+
+        .navbar-toggle .icon-bar {
+            background-color: #fff;
+        }
+
+        .navbar-toggle:before, .navbar-toggle:after {
+            display: table;
+            content: " ";
+        }
+
+        .navbar-toggle:after {
+            clear: both;
+        }
 
     #nav nav {
         background-color: #008dd2;
@@ -1755,86 +1895,74 @@ ul {
             width: 250px;
         }
 
-    #main .box {
-        margin-bottom: 5px;
-        /*width: 280px;*/
-    }
-
-    #main .manga-intro .box {
-        height: auto;
-    }
-
-    #main .col-lg-8 .box h2.box-title {
-        width: 90%;
-    }
-
-    #main .manga-intro h5.manga-intro-name {
-        padding-right: 15px;
-    }
-
-    #main .manga-intro .manga-intro-name a.readmore {
-        position: relative;
-        right: auto;
-        top: auto;
-    }
-
-    #main .manga-intro img.manga-intro-img {
-        margin-right: 5px;
-        max-width: 40%;
-    }
-
-    #main h4.fiction-content-endline:before,
-    #main h4.fiction-content-endline:after {
-        display: none;
-    }
-    
-    #main .profile-page .profile-info .email a.hidden-xs {
-        display: none !important;
-    }
-    
-    #main .profile-page .profile-info .email a.hidden-sm  {
-        display: inline-block !important;
-    }
-
-    /* menu */
-    .navbar-toggle {
-        float: none;
-        margin: 2px 5px 8px 0;
-    }
-
-        .navbar-toggle:hover, .navbar-toggle:focus {
-            background-color: #ddd;
-        }
-
-        .navbar-toggle .icon-bar {
-            background-color: #fff;
-        }
-
-        .navbar-toggle:before, .navbar-toggle:after {
-            display: table;
-            content: " ";
-        }
-
-        .navbar-toggle:after {
-            clear: both;
-        }
-
     .container .about-poster h4.box-title {
         width: 70%;
-    }
-
-    #main .fiction-content ul.sub-nav, #main .fiction-content h3.fiction-chapter {
-        text-align: center;
     }
 
     #main .fiction-content.box ul.zoom-nav {
         position: relative;
         top: 0;
-        right: 0;
+        right: auto;
+        text-align: left;
+        padding-left: 5px;
     }
 
     #main .comment-face {
         margin-bottom: 10px;
+    }
+    
+    /* Detail page */
+    #main .fiction-content .fiction-intro img.fiction-img {
+        float: none;
+        max-width: 35%;
+    }
+    
+    #main .fiction-content .fiction-intro ul.star-rate {
+        padding-right: 15px;
+    }
+    
+    /* Content page */
+    
+    #main .fiction-content h1.fiction-title {
+        font-size: 1.5em;
+    }
+    
+    #main .fiction-content h3.fiction-chapter {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    
+    #main .fiction-content .fiction-main-content {
+        padding: 0 5px;
+    }
+    
+    #main .fiction-content .fiction-content-nav li {
+        margin: 0;
+    }
+    
+    /* Profile page */
+    
+    #main .profile-page h2.title {
+        font-size: 1.35em;
+    }
+    
+    #main .profile-page .profile-info h5.name {
+        font-size: 1.15em;
+    }
+    
+    #main .profile-page .profile-comment-webtruyen h4.title, #main .profile-work-list h4.title {
+        font-size: 1.2em;
+    }
+    
+    #main .profile-work-list h4.title a.view-all {
+        display: block;
+        float: none !important;
+    }
+       
+    /* Footer */
+    
+    #main .contact-col {
+        border: none;
     }
 }
 /* Tablets (≥768px) .col-sm-*/
@@ -1923,6 +2051,11 @@ ul {
 
         #main .contact-col a.contact-email {
             font-size: 0.85em;
+        }
+        
+        /* Detail Page */
+        #main .fiction-content .fiction-intro ul.star-rate {
+            padding-right: 300px;
         }
 }
 
