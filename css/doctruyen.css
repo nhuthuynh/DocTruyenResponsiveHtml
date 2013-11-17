@@ -1010,30 +1010,41 @@ ul {
     font-weight: bold;
 }
 
-#main .fiction-content .fiction-intro ul.star-rate {
-    margin: 0;
+#main .fiction-content .fiction-intro div.rating {
+    height: 20px;
+    margin: 10px 0;
+}
+
+#main .fiction-content .fiction-intro div.rating:before,
+#main .fiction-content .fiction-intro div.rating:after {
+    display: table;
+    content: "";
+}
+
+#main .fiction-content .fiction-intro div.rating:after {
+    clear: both;
 }
 
 #main .fiction-content .fiction-intro ul.star-rate {
+    float: left;
+    margin: 0;
     overflow: hidden;
+    padding: 0;
 }
 
     #main .fiction-content .fiction-intro ul.star-rate li {
         background: url(../img/icons.png) no-repeat -101px -20px;
-        float: left;
+        float: right;
         height: 20px;
         position: relative;
         width: 20px;
     }
 
-        #main .fiction-content .fiction-intro ul.star-rate li:hover:before,
-        #main .fiction-content .fiction-intro ul.star-rate li.selected:before {
-            background: url(../img/icons.png) no-repeat -101px 0;
-            content: "";
-            height: 20px;
-            left: 0;
-            position: absolute;
-            width: 20px;
+        #main .fiction-content .fiction-intro ul.star-rate li:hover,
+        #main .fiction-content .fiction-intro ul.star-rate li.selected,
+        #main .fiction-content .fiction-intro ul.star-rate li:hover ~ li,
+        #main .fiction-content .fiction-intro ul.star-rate li.selected ~ li {
+            background-position: -101px 0;
         }
 
 #main .fiction-content .fiction-brief h5.title {
@@ -1532,6 +1543,10 @@ ul {
     width: 100%;
 }
 
+#main .profile-page .profile-comment-webtruyen textarea.comment-box {
+    margin-left: 10px;
+}
+
     #main .comment-webtruyen textarea.comment-box + p,
     #main .profile-page .profile-comment-webtruyen textarea.comment-box + p {
         padding-right: 15px;
@@ -1574,6 +1589,28 @@ ul {
     overflow: hidden;
     margin-bottom: 5px;
     text-align: justify;
+}
+
+#main .profile-page .profile-comment-webtruyen .comments-content,
+#main .profile-page .profile-comment-webtruyen p {
+    margin-left: 10px;
+}
+
+#main .comment-webtruyen .comment-box-lvl-2,
+#main .profile-page .comment-box-lvl-2 {
+    border-left: 1px solid #AEAEAE;
+    margin: 10px 0 10px 10px;
+    padding-left: 5px;
+}
+
+#main .comment-webtruyen .comment-box-lvl-2:hover, #main .comment-webtruyen .comment-box-lvl-2:focus,
+#main .profile-page .comment-box-lvl-2:hover, #main .profile-page .comment-box-lvl-2:focus {
+    border-left-color: #0085CA;
+}
+
+#main .comment-webtruyen .comment-box-lvl-2 > .row,
+#main .profile-page .comment-box-lvl-2 > .row {
+    margin: 0;
 }
 
 #main .comment-webtruyen .textLightBlue,

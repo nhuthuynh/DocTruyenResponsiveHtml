@@ -12,16 +12,39 @@
             suggestions = [];
         }
 
-        $('button.search-by').html($(this).text() + ' <span class="caret"></span>'); 
+        $('button.search-by').html($(this).text() + ' <span class="caret"></span>');
         $('ul.search-by-list').hide();
         $('.search-field').autocomplete('option', 'source', suggestions).val('');
     });
 
     $('.search-field').autocomplete({
         appendTo: 'ul.menu > li.search',
-        source: suggestions  
+        source: suggestions
     });
 
 
     $('#nav .navbar-toggle').collapse();
+
+    // hide #back-top first
+    $("#scrollUp").hide();
+
+    // fade in #back-top
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#scrollUp').fadeIn();
+            } else {
+                $('#scrollUp').fadeOut();
+            }
+        });
+
+        // scroll body to 0px on click
+        $('#scrollUp').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);
+            return false;
+        });
+    });
+
 });
