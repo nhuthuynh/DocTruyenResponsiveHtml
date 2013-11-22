@@ -1821,7 +1821,16 @@ ul {
         #main > .row > .col-xs-12 {
             padding: 0 5px;
         }
-
+    
+    /* Logo */
+    
+    #nav img.logo {
+        margin: -5px 0 0 5px;
+        width: 20%;
+    }
+    
+    /* Menu */
+    
     /* Table Responsive */
     .table-responsive > .table > thead > tr > th,
     .table-responsive > .table > tbody > tr > th,
@@ -1942,6 +1951,7 @@ ul {
         background-color: #008dd2;
         margin: 0;
         overflow-y: visible;
+        position: relative;
         padding: 0 15px;
         text-align: left;
         width: 320px;
