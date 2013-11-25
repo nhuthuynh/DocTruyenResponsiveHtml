@@ -17,11 +17,27 @@
         $('.search-field').autocomplete('option', 'source', suggestions).val('');
     });
 
-    $('.search-field').autocomplete({
+    $('ul.menu .search-field').autocomplete({
         appendTo: 'ul.menu > li.search',
-        source: suggestions
+        source: suggestions,
+        open: function () {
+            $("ul.menu > li.search > ul.ui-autocomplete").css({ 
+                left: 70,
+                top: 27
+            });
+        }
     });
 
+    $('.nav.mobile .search-field').autocomplete({
+        appendTo: '.nav.mobile > li.search',
+        source: suggestions,
+        open: function () {
+            $(".nav.mobile > li.search > ul.ui-autocomplete").css({
+                left: 0,
+                top: 27
+            });
+        }
+    });
 
     $('#nav .navbar-toggle').collapse();
 
